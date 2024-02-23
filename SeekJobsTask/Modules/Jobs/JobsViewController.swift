@@ -30,7 +30,7 @@ class JobsViewController: UIViewController {
        
         view.backgroundColor = .black
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(JobsTableViewCell.self, forCellReuseIdentifier: "jobsCell")
     
         tableView.delegate = self
         tableView.dataSource = self
@@ -53,11 +53,14 @@ extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
            return items.count
        }
 
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-           cell.textLabel?.text = items[indexPath.row]
-           return cell
-       }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobsCell", for: indexPath) as! JobsTableViewCell
+        
+        // Configure the cell with your data
+        cell.configure(withTitle: "Title", subtitle: "Subtitle", description: "Description")
+        
+        return cell
+    }
 
        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            print("Selected item: \(items[indexPath.row])")

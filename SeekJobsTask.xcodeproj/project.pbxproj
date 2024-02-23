@@ -32,6 +32,7 @@
 		36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */; };
 		36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */; };
 		36FF5D3F2B89204C005EEE0E /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3E2B89204C005EEE0E /* UserDefaultsManager.swift */; };
+		36FF5D412B892800005EEE0E /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		36FF5D3E2B89204C005EEE0E /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			children = (
 				368ACECC2B88571C003A8435 /* JobsViewController.swift */,
 				368ACF172B887E29003A8435 /* JobsViewModel.swift */,
+				36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				368ACF0A2B8873ED003A8435 /* AppConstants.swift in Sources */,
 				368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */,
 				36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */,
+				36FF5D412B892800005EEE0E /* JobsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
