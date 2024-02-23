@@ -3,19 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACEC82B88571C003A8435 /* AppDelegate.swift */; };
 		368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECA2B88571C003A8435 /* SceneDelegate.swift */; };
-		368ACECD2B88571C003A8435 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECC2B88571C003A8435 /* ViewController.swift */; };
+		368ACECD2B88571C003A8435 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECC2B88571C003A8435 /* JobsViewController.swift */; };
 		368ACED02B88571C003A8435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368ACECE2B88571C003A8435 /* Main.storyboard */; };
 		368ACED22B88571F003A8435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368ACED12B88571F003A8435 /* Assets.xcassets */; };
 		368ACED52B88571F003A8435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368ACED32B88571F003A8435 /* LaunchScreen.storyboard */; };
 		368ACEE02B885720003A8435 /* SeekJobsTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACEDF2B885720003A8435 /* SeekJobsTaskTests.swift */; };
 		368ACEEA2B885720003A8435 /* SeekJobsTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACEE92B885720003A8435 /* SeekJobsTaskUITests.swift */; };
 		368ACEEC2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACEEB2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift */; };
+		368ACEFA2B885786003A8435 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 368ACEF92B885786003A8435 /* Apollo */; };
+		368ACEFC2B885986003A8435 /* GraphQL in Resources */ = {isa = PBXBuildFile; fileRef = 368ACEFB2B885986003A8435 /* GraphQL */; };
+		368ACEFF2B88611B003A8435 /* JobsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 368ACEFE2B88611B003A8435 /* JobsAPI */; };
+		368ACF022B8863E5003A8435 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF012B8863E5003A8435 /* NetworkService.swift */; };
+		368ACF072B887108003A8435 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF062B887108003A8435 /* LoginViewController.swift */; };
+		368ACF0A2B8873ED003A8435 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF092B8873ED003A8435 /* AppConstants.swift */; };
+		368ACF0C2B8877A9003A8435 /* HexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF0B2B8877A9003A8435 /* HexColors.swift */; };
+		368ACF102B887BA7003A8435 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF0F2B887BA7003A8435 /* AppCoordinator.swift */; };
+		368ACF122B887BEB003A8435 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF112B887BEB003A8435 /* LoginCoordinator.swift */; };
+		368ACF142B887C4E003A8435 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF132B887C4E003A8435 /* LoginViewModel.swift */; };
+		368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF152B887DC7003A8435 /* HomeCoordinator.swift */; };
+		368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF172B887E29003A8435 /* JobsViewModel.swift */; };
+		36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */; };
+		36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +53,7 @@
 		368ACEC52B88571C003A8435 /* SeekJobsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekJobsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368ACEC82B88571C003A8435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368ACECA2B88571C003A8435 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		368ACECC2B88571C003A8435 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		368ACECC2B88571C003A8435 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		368ACECF2B88571C003A8435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		368ACED12B88571F003A8435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		368ACED42B88571F003A8435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +63,18 @@
 		368ACEE52B885720003A8435 /* SeekJobsTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeekJobsTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		368ACEE92B885720003A8435 /* SeekJobsTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekJobsTaskUITests.swift; sourceTree = "<group>"; };
 		368ACEEB2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekJobsTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		368ACEFB2B885986003A8435 /* GraphQL */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GraphQL; sourceTree = "<group>"; };
+		368ACF012B8863E5003A8435 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		368ACF062B887108003A8435 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		368ACF092B8873ED003A8435 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		368ACF0B2B8877A9003A8435 /* HexColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColors.swift; sourceTree = "<group>"; };
+		368ACF0F2B887BA7003A8435 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		368ACF112B887BEB003A8435 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		368ACF132B887C4E003A8435 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		368ACF152B887DC7003A8435 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		368ACF172B887E29003A8435 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
+		36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368ACEFA2B885786003A8435 /* Apollo in Frameworks */,
+				368ACEFF2B88611B003A8435 /* JobsAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +127,13 @@
 		368ACEC72B88571C003A8435 /* SeekJobsTask */ = {
 			isa = PBXGroup;
 			children = (
+				368ACF0E2B887B37003A8435 /* Coordinator */,
+				368ACF082B8873CF003A8435 /* Helpers */,
+				368ACF042B8870CB003A8435 /* Modules */,
+				368ACF002B8863B8003A8435 /* Network */,
+				368ACEFB2B885986003A8435 /* GraphQL */,
 				368ACEC82B88571C003A8435 /* AppDelegate.swift */,
 				368ACECA2B88571C003A8435 /* SceneDelegate.swift */,
-				368ACECC2B88571C003A8435 /* ViewController.swift */,
 				368ACECE2B88571C003A8435 /* Main.storyboard */,
 				368ACED12B88571F003A8435 /* Assets.xcassets */,
 				368ACED32B88571F003A8435 /* LaunchScreen.storyboard */,
@@ -127,6 +159,62 @@
 			path = SeekJobsTaskUITests;
 			sourceTree = "<group>";
 		};
+		368ACF002B8863B8003A8435 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF012B8863E5003A8435 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		368ACF042B8870CB003A8435 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF0D2B887B20003A8435 /* Jobs */,
+				368ACF052B8870DC003A8435 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		368ACF052B8870DC003A8435 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF062B887108003A8435 /* LoginViewController.swift */,
+				36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */,
+				368ACF132B887C4E003A8435 /* LoginViewModel.swift */,
+				36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		368ACF082B8873CF003A8435 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF092B8873ED003A8435 /* AppConstants.swift */,
+				368ACF0B2B8877A9003A8435 /* HexColors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		368ACF0D2B887B20003A8435 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				368ACECC2B88571C003A8435 /* JobsViewController.swift */,
+				368ACF172B887E29003A8435 /* JobsViewModel.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		368ACF0E2B887B37003A8435 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF0F2B887BA7003A8435 /* AppCoordinator.swift */,
+				368ACF112B887BEB003A8435 /* LoginCoordinator.swift */,
+				368ACF152B887DC7003A8435 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +231,10 @@
 			dependencies = (
 			);
 			name = SeekJobsTask;
+			packageProductDependencies = (
+				368ACEF92B885786003A8435 /* Apollo */,
+				368ACEFE2B88611B003A8435 /* JobsAPI */,
+			);
 			productName = SeekJobsTask;
 			productReference = 368ACEC52B88571C003A8435 /* SeekJobsTask.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +307,10 @@
 				Base,
 			);
 			mainGroup = 368ACEBC2B88571C003A8435;
+			packageReferences = (
+				368ACEF82B885786003A8435 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				368ACEFD2B88611B003A8435 /* XCLocalSwiftPackageReference "JobsAPI" */,
+			);
 			productRefGroup = 368ACEC62B88571C003A8435 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +329,7 @@
 			files = (
 				368ACED52B88571F003A8435 /* LaunchScreen.storyboard in Resources */,
 				368ACED22B88571F003A8435 /* Assets.xcassets in Resources */,
+				368ACEFC2B885986003A8435 /* GraphQL in Resources */,
 				368ACED02B88571C003A8435 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +355,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368ACECD2B88571C003A8435 /* ViewController.swift in Sources */,
+				368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */,
+				368ACECD2B88571C003A8435 /* JobsViewController.swift in Sources */,
 				368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */,
+				368ACF022B8863E5003A8435 /* NetworkService.swift in Sources */,
+				368ACF072B887108003A8435 /* LoginViewController.swift in Sources */,
+				368ACF102B887BA7003A8435 /* AppCoordinator.swift in Sources */,
+				368ACF0C2B8877A9003A8435 /* HexColors.swift in Sources */,
+				368ACF122B887BEB003A8435 /* LoginCoordinator.swift in Sources */,
+				36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */,
 				368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */,
+				36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */,
+				368ACF142B887C4E003A8435 /* LoginViewModel.swift in Sources */,
+				368ACF0A2B8873ED003A8435 /* AppConstants.swift in Sources */,
+				368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +715,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		368ACEFD2B88611B003A8435 /* XCLocalSwiftPackageReference "JobsAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = JobsAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		368ACEF82B885786003A8435 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		368ACEF92B885786003A8435 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 368ACEF82B885786003A8435 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		368ACEFE2B88611B003A8435 /* JobsAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JobsAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 368ACEBD2B88571C003A8435 /* Project object */;
 }
