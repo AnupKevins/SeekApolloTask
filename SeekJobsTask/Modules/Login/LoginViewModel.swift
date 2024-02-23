@@ -9,17 +9,13 @@ import Foundation
 import Combine
 
 class LoginViewModel: ObservableObject {
+    
     var loginRepositoryProtocol: LoginRepositoryProtocol?
     var coordinator: LoginCoordinator?
-    let objectWillChange = PassthroughSubject<Void, Never>()
+    
+    let authTokenWillChange = PassthroughSubject<Void, Never>()
     
     private (set) var postsAuthToken: String = ""
-    
-//    func fetch() {
-//        // fetch posts
-//        objectWillChange.send()
-//        // assign new data to the posts variable
-//    }
     
     init(
         coordinator: LoginCoordinator?,
@@ -43,17 +39,16 @@ class LoginViewModel: ObservableObject {
     
     private func performActionOnSuccess(_ value: String) {
         postsAuthToken = value
-        objectWillChange.send()
-        navigateToHomeJobsScreen()
+        authTokenWillChange.send()
     }
     
     private func performActionOnFailure() {
         showAlert()
     }
     
-    func navigateToHomeJobsScreen() {
-        coordinator?.goToHomeCoordinator()
-    }
+//    func navigateToHomeJobsScreen() {
+//        coordinator?.goToHomeCoordinator()
+//    }
     
     func validateUserCredentials(_ username: String, _ password: String) -> LoginValidation {
         if username.isEmpty || password.isEmpty {

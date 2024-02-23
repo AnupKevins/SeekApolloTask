@@ -23,7 +23,6 @@ struct LoginRepository: LoginRepositoryProtocol {
             switch result {
             case .success(let graphQLResult):
                 if let authToken = graphQLResult.data?.auth {
-                    // Assuming AuthToken is a struct/class representing your authentication result
                     completion(.success(authToken))
                 } else {
                     let appError = AppError.dataError(
@@ -41,6 +40,4 @@ struct LoginRepository: LoginRepositoryProtocol {
             }
         }
     }
-    
-    
 }

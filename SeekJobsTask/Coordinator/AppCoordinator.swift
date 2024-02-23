@@ -22,13 +22,28 @@ class AppCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     func start() {
-        goToLoginCoordinator()
+        if UserDefaultManager.shared.isLoggedIn {
+            goToHomeCoordinator()
+        } else {
+            goToLoginCoordinator()
+        }
     }
     
     func goToLoginCoordinator(){
-              
-        let loginCoordinator = LoginCoordinator(navigationController: self.navigationController)
         
-        loginCoordinator.start()
+        let loginFactory = LoginFactory()
+              
+        let loginCoordinator = loginFactory.createLoginCoordinator(
+            navigationController: navigationController
+        )
+        
+        loginCoordinator.start(loginFactory: loginFactory)
+    }
+    
+    func goToHomeCoordinator() {
+
+        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        
+        homeCoordinator.start()
     }
 }

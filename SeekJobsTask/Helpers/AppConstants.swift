@@ -15,7 +15,6 @@ enum AppConstants {
         static let loginPlaceholder = "Login"
         static let invalidCredentialTitle = "Invalid Credential"
         static let invalidCredentialMessage = "Enter a valid UserName and Password"
-        static let authTokenKey = "UserAuthToken"
     }
     
     enum UIColors {

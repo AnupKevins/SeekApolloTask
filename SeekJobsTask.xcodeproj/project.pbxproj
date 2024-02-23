@@ -30,6 +30,8 @@
 		368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF172B887E29003A8435 /* JobsViewModel.swift */; };
 		36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */; };
 		36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */; };
+		36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */; };
+		36FF5D3F2B89204C005EEE0E /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3E2B89204C005EEE0E /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		368ACF172B887E29003A8435 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		36FF5D3E2B89204C005EEE0E /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		368ACEC72B88571C003A8435 /* SeekJobsTask */ = {
 			isa = PBXGroup;
 			children = (
+				36FF5D3B2B89128D005EEE0E /* Factory */,
 				368ACF0E2B887B37003A8435 /* Coordinator */,
 				368ACF082B8873CF003A8435 /* Helpers */,
 				368ACF042B8870CB003A8435 /* Modules */,
@@ -192,6 +197,7 @@
 			children = (
 				368ACF092B8873ED003A8435 /* AppConstants.swift */,
 				368ACF0B2B8877A9003A8435 /* HexColors.swift */,
+				36FF5D3E2B89204C005EEE0E /* UserDefaultsManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +219,14 @@
 				368ACF152B887DC7003A8435 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		36FF5D3B2B89128D005EEE0E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +375,7 @@
 				368ACF022B8863E5003A8435 /* NetworkService.swift in Sources */,
 				368ACF072B887108003A8435 /* LoginViewController.swift in Sources */,
 				368ACF102B887BA7003A8435 /* AppCoordinator.swift in Sources */,
+				36FF5D3F2B89204C005EEE0E /* UserDefaultsManager.swift in Sources */,
 				368ACF0C2B8877A9003A8435 /* HexColors.swift in Sources */,
 				368ACF122B887BEB003A8435 /* LoginCoordinator.swift in Sources */,
 				36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */,
@@ -369,6 +384,7 @@
 				368ACF142B887C4E003A8435 /* LoginViewModel.swift in Sources */,
 				368ACF0A2B8873ED003A8435 /* AppConstants.swift in Sources */,
 				368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */,
+				36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -101,7 +101,7 @@ class LoginViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        loginViewModel?.objectWillChange.sink { [weak self] in
+        loginViewModel?.authTokenWillChange.sink { [weak self] in
             guard let self = self else {
                 return
             }
@@ -110,7 +110,7 @@ class LoginViewController: UIViewController {
         }.store(in: &cancellables)
     }
 
-    @objc func loginButtonTapped() {
+    @objc private func loginButtonTapped() {
         view.endEditing(true)
         
         if let usernameTrimmed = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased(),
@@ -124,7 +124,7 @@ class LoginViewController: UIViewController {
        }
     }
     
-    func checkValidation(
+    private func checkValidation(
         _ validation: LoginValidation?,
         _ username: String,
         _ password: String
@@ -137,13 +137,19 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func storeAuthToken(_ token: String?) {
+    private func storeAuthToken(_ token: String?) {
         
         if let token = token {
             print("Token:\(token)")
-            UserDefaults.standard.setValue(
-                token, forKey: AppConstants.Login.authTokenKey
-            )
+            UserDefaultManager.shared.authToken = token
+            UserDefaultManager.shared.isLoggedIn = true
+            setupHomeCoordinatorAsRoot()
+        }
+    }
+    
+    private func setupHomeCoordinatorAsRoot() {
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            sceneDelegate.switchToRootScreen()
         }
     }
 }

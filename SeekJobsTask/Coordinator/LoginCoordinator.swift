@@ -8,20 +8,27 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: Coordinator {
+protocol LoginCoordinatorProtocol {
+    var navigationController : UINavigationController { get set }
+    
+    func start(loginFactory: LoginFactoryProtocol)
+}
+
+class LoginCoordinator: LoginCoordinatorProtocol {
 
     var navigationController: UINavigationController
+    
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
-    func start() {
-        let loginViewController = LoginViewController()
+    func start(loginFactory: LoginFactoryProtocol) {
         
-        loginViewController.loginViewModel = LoginViewModel(
-            coordinator: self,
-            loginRepositoryProtocol: LoginRepository()
+        let loginViewController = loginFactory.createLoginViewController()
+        
+        loginViewController.loginViewModel = loginFactory.createLoginViewModel(
+            loginCoordinator: self
         )
         
         navigationController.pushViewController(loginViewController, animated: true)
@@ -29,9 +36,9 @@ class LoginCoordinator: Coordinator {
     
     func goToHomeCoordinator() {
 
-        let loginCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
         
-        loginCoordinator.start()
+        homeCoordinator.start()
     }
     
     func presentAlert(title: String, message: String) {
@@ -45,14 +52,11 @@ class LoginCoordinator: Coordinator {
                 title: "OK",
                 style: .default,
                 handler: { [weak self] _ in
-                    // Additional handling can be added here if needed
                     self?.navigationController.topViewController?.dismiss(animated: true)
                 }
             )
 
             alertController.addAction(okAction)
-
-            // Present the alert from the topmost view controller
             navigationController.topViewController?.present(alertController, animated: true, completion: nil)
         }
 }
