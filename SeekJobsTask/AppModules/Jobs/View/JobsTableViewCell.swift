@@ -49,6 +49,19 @@ class JobsTableViewCell: UITableViewCell {
         return label
     }()
     
+    private lazy var appliedLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .white
+        label.numberOfLines = 1
+        label.backgroundColor = HexColor.getUIColor(AppConstants.UIColors.hexStringBackground)
+        label.text = JobsConstants.textConstants.jobsApplied
+        label.layer.cornerRadius = 15
+        label.textAlignment = .center
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCardView()
@@ -72,16 +85,26 @@ class JobsTableViewCell: UITableViewCell {
         ])
         
     }
-    
+   
     private func setupUI() {
         cardView.addSubview(titleLabel)
         cardView.addSubview(subtitleLabel)
         cardView.addSubview(descriptionLabel)
+        cardView.addSubview(appliedLabel)
         
+        setupConstraints()
+    }
+    
+    fileprivate func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
+            titleLabel.trailingAnchor.constraint(equalTo: appliedLabel.leadingAnchor, constant: -16),
+            
+            appliedLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 16),
+            appliedLabel.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
+            appliedLabel.widthAnchor.constraint(equalToConstant: 60),
+            appliedLabel.heightAnchor.constraint(equalToConstant: 30),
             
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             subtitleLabel.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
@@ -94,9 +117,16 @@ class JobsTableViewCell: UITableViewCell {
         ])
     }
     
-    func configure(withTitle title: String?, subtitle: String?, description: String?) {
+    
+    func configure(
+        withTitle title: String?,
+        subtitle: String?,
+        description: String?,
+        applied: Bool?
+    ) {
         titleLabel.text = title ?? ""
         subtitleLabel.text = subtitle ?? ""
         descriptionLabel.text = description ?? ""
+        appliedLabel.isHidden = !(applied ?? false)
     }
 }

@@ -17,6 +17,7 @@ enum JobsConstants {
         static let jobsTitle = "Active Jobs"
         static let noResponseTitle = "Try Again later"
         static let noResponseDescription = "Something went wrong"
+        static let jobsApplied = "Applied"
     }
     
     enum dataConstants {

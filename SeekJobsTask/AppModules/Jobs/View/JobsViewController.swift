@@ -101,13 +101,7 @@ extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: jobsCellStrIdentifier, for: indexPath) as! JobsTableViewCell
         
-        let title = jobsViewModel?.jobList[indexPath.row].positionTitle
-        
-        let description = jobsViewModel?.jobList[indexPath.row].description
-        
-        let subtitle = jobsViewModel?.jobList[indexPath.row].id
-        
-        cell.configure(withTitle: title, subtitle: subtitle , description: description)
+        configureCell(indexPath, cell)
         
         return cell
     }
@@ -115,6 +109,24 @@ extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected item: \(jobsViewModel?.jobList[indexPath.row])")
     }
+    
+    fileprivate func configureCell(_ indexPath: IndexPath, _ cell: JobsTableViewCell) {
+        let title = jobsViewModel?.jobList[indexPath.row].positionTitle
+        
+        let description = jobsViewModel?.jobList[indexPath.row].description
+        
+        let subtitle = jobsViewModel?.jobList[indexPath.row].id
+        
+        let applied = jobsViewModel?.jobList[indexPath.row].haveIApplied
+        
+        cell.configure(
+            withTitle: title,
+            subtitle: subtitle,
+            description: description,
+            applied: applied
+        )
+    }
+    
 }
 
 extension JobsViewController: UIScrollViewDelegate {
