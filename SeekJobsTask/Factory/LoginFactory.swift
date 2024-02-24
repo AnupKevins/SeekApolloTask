@@ -10,7 +10,9 @@ import UIKit
 
 protocol LoginFactoryProtocol {
     
-    func createLoginCoordinator(navigationController: UINavigationController) -> LoginCoordinator
+    func createLoginCoordinator(
+        navigationController: UINavigationController
+    ) -> LoginCoordinator
     
     func createLoginViewController() -> LoginViewController
     
@@ -18,11 +20,16 @@ protocol LoginFactoryProtocol {
     
     func createLoginRepository() -> LoginRepositoryProtocol
 }
-
+ 
 class LoginFactory: LoginFactoryProtocol {
    
-    func createLoginCoordinator(navigationController: UINavigationController) -> LoginCoordinator {
-        return LoginCoordinator(navigationController: navigationController)
+    func createLoginCoordinator(
+        navigationController: UINavigationController
+    ) -> LoginCoordinator {
+        
+        return LoginCoordinator(
+            navigationController: navigationController
+        )
     }
     
     func createLoginViewController() -> LoginViewController {
