@@ -29,6 +29,8 @@
 		368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF152B887DC7003A8435 /* HomeCoordinator.swift */; };
 		368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF172B887E29003A8435 /* JobsViewModel.swift */; };
 		36DD28B12B89F12000686F6E /* JobsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B02B89F12000686F6E /* JobsConstants.swift */; };
+		36DD28B42B89F9F300686F6E /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B32B89F9F300686F6E /* JobsRepository.swift */; };
+		36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B62B89FA2300686F6E /* ActiveJobs.swift */; };
 		36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */; };
 		36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */; };
 		36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */; };
@@ -78,6 +80,8 @@
 		368ACF152B887DC7003A8435 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		368ACF172B887E29003A8435 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		36DD28B02B89F12000686F6E /* JobsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsConstants.swift; sourceTree = "<group>"; };
+		36DD28B32B89F9F300686F6E /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
+		36DD28B62B89FA2300686F6E /* ActiveJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobs.swift; sourceTree = "<group>"; };
 		36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 		368ACF0D2B887B20003A8435 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				36DD28B52B89FA0300686F6E /* Models */,
+				36DD28B22B89F9C000686F6E /* Repository */,
 				36DD28AF2B89F10300686F6E /* Helpers */,
 				36DD28AC2B89EC7800686F6E /* ViewModel */,
 				36DD28AB2B89EC6B00686F6E /* View */,
@@ -305,6 +311,22 @@
 				36DD28B02B89F12000686F6E /* JobsConstants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		36DD28B22B89F9C000686F6E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				36DD28B32B89F9F300686F6E /* JobsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		36DD28B52B89FA0300686F6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36DD28B62B89FA2300686F6E /* ActiveJobs.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,11 +482,13 @@
 				36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */,
 				368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */,
 				36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */,
+				36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */,
 				368ACF142B887C4E003A8435 /* LoginViewModel.swift in Sources */,
 				368ACF0A2B8873ED003A8435 /* AppConstants.swift in Sources */,
 				368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */,
 				36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */,
 				36FF5D412B892800005EEE0E /* JobsTableViewCell.swift in Sources */,
+				36DD28B42B89F9F300686F6E /* JobsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

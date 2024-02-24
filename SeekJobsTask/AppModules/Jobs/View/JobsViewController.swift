@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class JobsViewController: UIViewController {
     
@@ -25,10 +26,29 @@ class JobsViewController: UIViewController {
     
     let jobsCellStrIdentifier = JobsConstants.TableCellIdentifiers.jobsTableCell
     
+    private var cancellables: Set<AnyCancellable> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavUI()
         configureUI()
+        setupSubscriptions()
+        fetchJobs()
+        
+    }
+    
+    func fetchJobs() {
+        jobsViewModel?.fetchActiveJobs(page: 1)
+    }
+    
+    func setupSubscriptions() {
+        
+        jobsViewModel?.jobsSubject.sink { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.reloadTableView()
+        }.store(in: &cancellables)
     }
     
     private func configureUI() {
@@ -64,24 +84,49 @@ class JobsViewController: UIViewController {
         }
     }
     
+    private func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.jobsViewModel?.isLoading = false
+        }
+    }
 }
 
 extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return jobsViewModel?.jobList.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: jobsCellStrIdentifier, for: indexPath) as! JobsTableViewCell
         
-        cell.configure(withTitle: "Title", subtitle: "Subtitle", description: "Description")
+        let title = jobsViewModel?.jobList[indexPath.row].positionTitle
+        
+        let description = jobsViewModel?.jobList[indexPath.row].description
+        
+        let subtitle = jobsViewModel?.jobList[indexPath.row].id
+        
+        cell.configure(withTitle: title, subtitle: subtitle , description: description)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected item: \(items[indexPath.row])")
+        print("Selected item: \(jobsViewModel?.jobList[indexPath.row])")
     }
+}
+
+extension JobsViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let screenHeight = scrollView.frame.size.height
+        let threshold: CGFloat = 300
+        if offsetY > contentHeight - screenHeight - threshold, let joblist = jobsViewModel?.jobList {
+            jobsViewModel?.fetchAdditionalDataIfNeeded(for: IndexPath(row: joblist.count - 1, section: 0))
+        }
+    }
+
 }
 

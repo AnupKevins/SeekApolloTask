@@ -15,5 +15,11 @@ enum JobsConstants {
     
     enum textConstants {
         static let jobsTitle = "Active Jobs"
+        static let noResponseTitle = "Try Again later"
+        static let noResponseDescription = "Something went wrong"
+    }
+    
+    enum dataConstants {
+        static let itemLimits = 8
     }
 }

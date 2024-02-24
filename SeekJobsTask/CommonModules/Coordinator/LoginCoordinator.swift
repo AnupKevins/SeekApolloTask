@@ -42,21 +42,21 @@ class LoginCoordinator: LoginCoordinatorProtocol {
     }
     
     func presentAlert(title: String, message: String) {
-            let alertController = UIAlertController(
-                title: title,
-                message: message,
-                preferredStyle: .alert
-            )
-
-            let okAction = UIAlertAction(
-                title: "OK",
-                style: .default,
-                handler: { [weak self] _ in
-                    self?.navigationController.topViewController?.dismiss(animated: true)
-                }
-            )
-
-            alertController.addAction(okAction)
-            navigationController.topViewController?.present(alertController, animated: true, completion: nil)
-        }
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: { [weak self] _ in
+                self?.navigationController.topViewController?.dismiss(animated: true)
+            }
+        )
+        
+        alertController.addAction(okAction)
+        navigationController.topViewController?.present(alertController, animated: true, completion: nil)
+    }
 }

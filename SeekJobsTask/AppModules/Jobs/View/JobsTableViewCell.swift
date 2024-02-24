@@ -10,7 +10,7 @@ import UIKit
 
 class JobsTableViewCell: UITableViewCell {
     
-    lazy var cardView: UIView = {
+    private lazy var cardView: UIView = {
         let view = UIView()
         view.backgroundColor = HexColor.getUIColor(
             AppConstants.UIColors.hexStringCellBackground
@@ -24,7 +24,7 @@ class JobsTableViewCell: UITableViewCell {
         return view
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -32,7 +32,7 @@ class JobsTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var subtitleLabel: UILabel = {
+    private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12)
@@ -40,7 +40,7 @@ class JobsTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
@@ -94,9 +94,9 @@ class JobsTableViewCell: UITableViewCell {
         ])
     }
     
-    func configure(withTitle title: String, subtitle: String, description: String) {
-        titleLabel.text = title
-        subtitleLabel.text = subtitle
-        descriptionLabel.text = description
+    func configure(withTitle title: String?, subtitle: String?, description: String?) {
+        titleLabel.text = title ?? ""
+        subtitleLabel.text = subtitle ?? ""
+        descriptionLabel.text = description ?? ""
     }
 }
