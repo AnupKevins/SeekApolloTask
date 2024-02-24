@@ -30,19 +30,19 @@ class AppCoordinator: Coordinator {
     }
     
     func goToLoginCoordinator(){
-        
-        let loginFactory = LoginFactory()
               
-        let loginCoordinator = loginFactory.createLoginCoordinator(
+        let loginCoordinator = LoginFactory.createLoginCoordinator(
             navigationController: navigationController
         )
         
-        loginCoordinator.start(loginFactory: loginFactory)
+        loginCoordinator.start()
     }
     
     func goToHomeCoordinator() {
 
-        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        let homeCoordinator = JobsFactory.createHomeCoordinator(
+            navigationController: self.navigationController
+        )
         
         homeCoordinator.start()
     }

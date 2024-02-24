@@ -6,23 +6,6 @@ protocol Requestable {
     var baseUrl: URL { get }
 }
 
-enum AppError: LocalizedError {
-    case unknownError
-    case networkError(status: Int, description: String)
-    case dataError(description: String)
-    
-    var localizedDescription: String {
-        switch self {
-        case .unknownError:
-            return "Unknown Error has Occurred"
-        case .networkError(status: let status, description: let desc):
-            return "\(status): \(desc)"
-        case .dataError(description: let desc):
-            return desc
-        }
-    }
-}
-
 protocol NetworkServiceProtocol {
     
     func setGraphQLURL(_ url: URL)
@@ -88,6 +71,23 @@ class NetworkService: NetworkServiceProtocol {
                 print("Error: \(error)")
                 completion(.failure(error))
             }
+        }
+    }
+}
+
+enum AppError: LocalizedError {
+    case unknownError
+    case networkError(status: Int, description: String)
+    case dataError(description: String)
+    
+    var localizedDescription: String {
+        switch self {
+        case .unknownError:
+            return "Unknown Error has Occurred"
+        case .networkError(status: let status, description: let desc):
+            return "\(status): \(desc)"
+        case .dataError(description: let desc):
+            return desc
         }
     }
 }

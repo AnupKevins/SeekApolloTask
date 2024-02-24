@@ -8,13 +8,7 @@
 import Foundation
 import UIKit
 
-protocol LoginCoordinatorProtocol {
-    var navigationController : UINavigationController { get set }
-    
-    func start(loginFactory: LoginFactoryProtocol)
-}
-
-class LoginCoordinator: LoginCoordinatorProtocol {
+class LoginCoordinator: Coordinator {
 
     var navigationController: UINavigationController
     
@@ -23,11 +17,11 @@ class LoginCoordinator: LoginCoordinatorProtocol {
         self.navigationController = navigationController
     }
 
-    func start(loginFactory: LoginFactoryProtocol) {
+    func start() {
         
-        let loginViewController = loginFactory.createLoginViewController()
+        let loginViewController = LoginFactory.createLoginViewController()
         
-        loginViewController.loginViewModel = loginFactory.createLoginViewModel(
+        loginViewController.loginViewModel = LoginFactory.createLoginViewModel(
             loginCoordinator: self
         )
         
@@ -36,7 +30,9 @@ class LoginCoordinator: LoginCoordinatorProtocol {
     
     func goToHomeCoordinator() {
 
-        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        let homeCoordinator = JobsFactory.createHomeCoordinator(
+            navigationController: self.navigationController
+        )
         
         homeCoordinator.start()
     }

@@ -17,9 +17,10 @@ class HomeCoordinator: Coordinator {
     }
 
     func start() {
-        let jobsViewController = JobsViewController()
         
-        jobsViewController.jobsViewModel = JobsViewModel(coordinator: self, jobsRepositoryProtocol: JobsRepository())
+        let jobsViewController = JobsFactory.createJobsViewController()
+        
+        jobsViewController.jobsViewModel = JobsFactory.createJobsViewModel(homeCoordinator: self)
         
         navigationController.pushViewController(jobsViewController, animated: true)
     }

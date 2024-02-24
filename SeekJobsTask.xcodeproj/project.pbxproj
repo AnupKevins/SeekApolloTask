@@ -33,6 +33,7 @@
 		36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B62B89FA2300686F6E /* ActiveJobs.swift */; };
 		36DD28B92B8A5A8500686F6E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B82B8A5A8500686F6E /* LoginRequest.swift */; };
 		36DD28BB2B8A613800686F6E /* JobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28BA2B8A613800686F6E /* JobsRequest.swift */; };
+		36DD28BE2B8A77A100686F6E /* JobsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28BD2B8A77A100686F6E /* JobsFactory.swift */; };
 		36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */; };
 		36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */; };
 		36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */; };
@@ -86,6 +87,7 @@
 		36DD28B62B89FA2300686F6E /* ActiveJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobs.swift; sourceTree = "<group>"; };
 		36DD28B82B8A5A8500686F6E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		36DD28BA2B8A613800686F6E /* JobsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRequest.swift; sourceTree = "<group>"; };
+		36DD28BD2B8A77A100686F6E /* JobsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsFactory.swift; sourceTree = "<group>"; };
 		36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		368ACF0D2B887B20003A8435 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				36DD28BC2B8A776200686F6E /* Factory */,
 				36DD28B52B89FA0300686F6E /* Models */,
 				36DD28B22B89F9C000686F6E /* Repository */,
 				36DD28AF2B89F10300686F6E /* Helpers */,
@@ -333,6 +336,14 @@
 				36DD28B62B89FA2300686F6E /* ActiveJobs.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		36DD28BC2B8A776200686F6E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				36DD28BD2B8A77A100686F6E /* JobsFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +492,7 @@
 				368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */,
 				368ACF022B8863E5003A8435 /* NetworkService.swift in Sources */,
 				368ACF072B887108003A8435 /* LoginViewController.swift in Sources */,
+				36DD28BE2B8A77A100686F6E /* JobsFactory.swift in Sources */,
 				368ACF102B887BA7003A8435 /* AppCoordinator.swift in Sources */,
 				36DD28B92B8A5A8500686F6E /* LoginRequest.swift in Sources */,
 				36FF5D3F2B89204C005EEE0E /* UserDefaultsManager.swift in Sources */,
