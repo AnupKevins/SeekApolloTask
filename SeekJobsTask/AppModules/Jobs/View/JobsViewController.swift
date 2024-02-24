@@ -14,21 +14,30 @@ class JobsViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = HexColor.getUIColor(
+            AppConstants.UIColors.hexStringTableBackground
+        )
+        tableView.separatorStyle = .none
         return tableView
     }()
     
     var jobsViewModel: JobsViewModel?
     
+    let jobsCellStrIdentifier = JobsConstants.TableCellIdentifiers.jobsTableCell
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavUI()
         configureUI()
     }
     
     private func configureUI() {
         
-        view.backgroundColor = .black
+        view.backgroundColor = HexColor.getUIColor(
+            AppConstants.UIColors.hexStringBackground
+        )
         
-        tableView.register(JobsTableViewCell.self, forCellReuseIdentifier: "jobsCell")
+        tableView.register(JobsTableViewCell.self, forCellReuseIdentifier: jobsCellStrIdentifier)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -36,11 +45,23 @@ class JobsViewController: UIViewController {
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    private func configureNavUI() {
+        
+        if let navigationController = navigationController {
+            navigationController.navigationBar.barTintColor = HexColor.getUIColor(
+                AppConstants.UIColors.hexStringBackground
+            )
+            navigationController.navigationBar.tintColor = UIColor.white
+            navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            navigationItem.title = JobsConstants.textConstants.jobsTitle
+        }
     }
     
 }
@@ -52,7 +73,7 @@ extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jobsCell", for: indexPath) as! JobsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: jobsCellStrIdentifier, for: indexPath) as! JobsTableViewCell
         
         cell.configure(withTitle: "Title", subtitle: "Subtitle", description: "Description")
         

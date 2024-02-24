@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  LoginConstants.swift
 //  SeekJobsTask
 //
 //  Created by Anup kumar sahu on 23/02/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AppConstants {
+enum LoginConstants {
     
     enum Login {
         static let userNamePlaceholder = "Username"
@@ -16,9 +16,9 @@ enum AppConstants {
         static let invalidCredentialTitle = "Invalid Credential"
         static let invalidCredentialMessage = "Enter a valid UserName and Password"
     }
-    
-    enum UIColors {
-        static let hexStringBackground = "#0D3880"
-        static let hexStringActionButton = "#2765CF"
-    }
+}
+
+enum LoginValidation {
+    case usernamePasswordEmpty
+    case valid
 }

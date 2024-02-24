@@ -59,8 +59,8 @@ class LoginViewModel: ObservableObject {
     
     func showAlert() {
         coordinator?.presentAlert(
-            title: AppConstants.Login.invalidCredentialTitle, 
-            message: AppConstants.Login.invalidCredentialMessage
+            title: LoginConstants.Login.invalidCredentialTitle,
+            message: LoginConstants.Login.invalidCredentialMessage
         )
     }
 }

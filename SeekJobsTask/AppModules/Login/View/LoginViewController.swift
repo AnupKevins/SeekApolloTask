@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     // Create text fields
     private lazy var usernameTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = AppConstants.Login.userNamePlaceholder
+        textField.placeholder = LoginConstants.Login.userNamePlaceholder
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
 
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = AppConstants.Login.passwordPlaceholder
+        textField.placeholder = LoginConstants.Login.passwordPlaceholder
         textField.isSecureTextEntry = true
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     // Create a login button
     private lazy var loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle(AppConstants.Login.loginPlaceholder, for: .normal)
+        button.setTitle(LoginConstants.Login.loginPlaceholder, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = HexColor.getUIColor(AppConstants.UIColors.hexStringActionButton)
         button.translatesAutoresizingMaskIntoConstraints = false

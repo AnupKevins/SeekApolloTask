@@ -28,6 +28,7 @@
 		368ACF142B887C4E003A8435 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF132B887C4E003A8435 /* LoginViewModel.swift */; };
 		368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF152B887DC7003A8435 /* HomeCoordinator.swift */; };
 		368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF172B887E29003A8435 /* JobsViewModel.swift */; };
+		36DD28B12B89F12000686F6E /* JobsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B02B89F12000686F6E /* JobsConstants.swift */; };
 		36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */; };
 		36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */; };
 		36FF5D3D2B8912AF005EEE0E /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */; };
@@ -76,6 +77,7 @@
 		368ACF132B887C4E003A8435 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		368ACF152B887DC7003A8435 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		368ACF172B887E29003A8435 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
+		36DD28B02B89F12000686F6E /* JobsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsConstants.swift; sourceTree = "<group>"; };
 		36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
@@ -133,14 +135,9 @@
 		368ACEC72B88571C003A8435 /* SeekJobsTask */ = {
 			isa = PBXGroup;
 			children = (
-				36FF5D3B2B89128D005EEE0E /* Factory */,
-				368ACF0E2B887B37003A8435 /* Coordinator */,
-				368ACF082B8873CF003A8435 /* Helpers */,
-				368ACF042B8870CB003A8435 /* Modules */,
-				368ACF002B8863B8003A8435 /* Network */,
+				36DD28AD2B89ECFA00686F6E /* CommonModules */,
+				368ACF042B8870CB003A8435 /* AppModules */,
 				368ACEFB2B885986003A8435 /* GraphQL */,
-				368ACEC82B88571C003A8435 /* AppDelegate.swift */,
-				368ACECA2B88571C003A8435 /* SceneDelegate.swift */,
 				368ACECE2B88571C003A8435 /* Main.storyboard */,
 				368ACED12B88571F003A8435 /* Assets.xcassets */,
 				368ACED32B88571F003A8435 /* LaunchScreen.storyboard */,
@@ -174,22 +171,23 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		368ACF042B8870CB003A8435 /* Modules */ = {
+		368ACF042B8870CB003A8435 /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
 				368ACF0D2B887B20003A8435 /* Jobs */,
 				368ACF052B8870DC003A8435 /* Login */,
 			);
-			path = Modules;
+			path = AppModules;
 			sourceTree = "<group>";
 		};
 		368ACF052B8870DC003A8435 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				368ACF062B887108003A8435 /* LoginViewController.swift */,
-				36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */,
-				368ACF132B887C4E003A8435 /* LoginViewModel.swift */,
-				36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */,
+				36DD28AA2B89EC2E00686F6E /* Helpers */,
+				36DD28A92B89EC1C00686F6E /* View */,
+				36DD28A82B89EC0500686F6E /* ViewModel */,
+				36DD28A72B89EBF200686F6E /* Repository */,
+				36DD28A62B89EBD800686F6E /* Factory */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -207,9 +205,9 @@
 		368ACF0D2B887B20003A8435 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
-				368ACECC2B88571C003A8435 /* JobsViewController.swift */,
-				368ACF172B887E29003A8435 /* JobsViewModel.swift */,
-				36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */,
+				36DD28AF2B89F10300686F6E /* Helpers */,
+				36DD28AC2B89EC7800686F6E /* ViewModel */,
+				36DD28AB2B89EC6B00686F6E /* View */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -224,12 +222,89 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		36FF5D3B2B89128D005EEE0E /* Factory */ = {
+		36DD28A62B89EBD800686F6E /* Factory */ = {
 			isa = PBXGroup;
 			children = (
 				36FF5D3C2B8912AF005EEE0E /* LoginFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		36DD28A72B89EBF200686F6E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				36FF5D332B88B2A9005EEE0E /* LoginRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		36DD28A82B89EC0500686F6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF132B887C4E003A8435 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		36DD28A92B89EC1C00686F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF062B887108003A8435 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36DD28AA2B89EC2E00686F6E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				36FF5D372B88ED5A005EEE0E /* LoginConstants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		36DD28AB2B89EC6B00686F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */,
+				368ACECC2B88571C003A8435 /* JobsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36DD28AC2B89EC7800686F6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				368ACF172B887E29003A8435 /* JobsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		36DD28AD2B89ECFA00686F6E /* CommonModules */ = {
+			isa = PBXGroup;
+			children = (
+				36DD28AE2B89ED1A00686F6E /* Delegates */,
+				368ACF0E2B887B37003A8435 /* Coordinator */,
+				368ACF002B8863B8003A8435 /* Network */,
+				368ACF082B8873CF003A8435 /* Helpers */,
+			);
+			path = CommonModules;
+			sourceTree = "<group>";
+		};
+		36DD28AE2B89ED1A00686F6E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				368ACEC82B88571C003A8435 /* AppDelegate.swift */,
+				368ACECA2B88571C003A8435 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		36DD28AF2B89F10300686F6E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				36DD28B02B89F12000686F6E /* JobsConstants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */,
+				36DD28B12B89F12000686F6E /* JobsConstants.swift in Sources */,
 				368ACECD2B88571C003A8435 /* JobsViewController.swift in Sources */,
 				368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */,
 				368ACF022B8863E5003A8435 /* NetworkService.swift in Sources */,
