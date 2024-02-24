@@ -21,6 +21,6 @@ enum JobsConstants {
     }
     
     enum dataConstants {
-        static let itemLimits = 8
+        static let itemLimits = 5
     }
 }

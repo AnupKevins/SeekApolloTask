@@ -26,7 +26,9 @@ class LoginViewModel: ObservableObject {
     }
     
     func getAuthToken(_ username: String, _ password: String) {
-        self.loginRepositoryProtocol?.authenticate(username: username, password: password, completion: { [weak self] result in
+        
+        let loginRequest = LoginRequest(username: username, password: password)
+        self.loginRepositoryProtocol?.authenticate(loginRequest: loginRequest, completion: { [weak self] result in
             
             switch result {
             case .success(let value):
@@ -44,6 +46,7 @@ class LoginViewModel: ObservableObject {
     
     private func performActionOnFailure() {
         showAlert()
+        authTokenWillChange.send()
     }
     
 //    func navigateToHomeJobsScreen() {

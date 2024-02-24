@@ -6,38 +6,41 @@
 //
 
 import Foundation
-import Apollo
 import JobsAPI
 
 protocol LoginRepositoryProtocol {
-    func authenticate(username: String, password: String, completion: @escaping (Result<String, AppError>) -> Void)
+    func authenticate(loginRequest: LoginRequest, completion: @escaping (Result<String, AppError>) -> Void)
 }
 
 struct LoginRepository: LoginRepositoryProtocol {
     
-    func authenticate(username: String, password: String, completion: @escaping (Result<String, AppError>) -> Void) {
-        let mutation = AuthMutation(username: username, password: password)
-        
-        NetworkService.shared.apollo.perform(mutation: mutation) { result in
+    func authenticate(loginRequest: LoginRequest, completion: @escaping (Result<String, AppError>) -> Void) {
+        let mutation = AuthMutation(
+            username: loginRequest.username, password: loginRequest.password
+        )
+        //let networkService = NetworkService(request: loginRequest)
+        let networkService = NetworkService.shared
+        networkService.performMutationWithGraphQLQuery(mutation: mutation) { result in
             
             switch result {
-            case .success(let graphQLResult):
-                if let authToken = graphQLResult.data?.auth {
+            case .success(let graphQLResultData):
+                if let authToken = graphQLResultData?.auth as? String {
                     completion(.success(authToken))
                 } else {
                     let appError = AppError.dataError(
-                         description: "Invalid Response"
-                     )
+                        description: "Invalid Response"
+                    )
                     completion(.failure(appError))
                 }
             case .failure(let error):
                 // Handle network or other errors
                 let appError = AppError.dataError(
                     description: error.localizedDescription
-                 )
-                 
+                )
+                
                 completion(.failure(appError))
             }
         }
     }
 }
+

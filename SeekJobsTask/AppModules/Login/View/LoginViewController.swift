@@ -105,11 +105,11 @@ class LoginViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            self.activityIndicator.stopAnimating()
-            self.storeAuthToken(self.loginViewModel?.postsAuthToken)
+            updateUI()
+            
         }.store(in: &cancellables)
     }
-
+    
     @objc private func loginButtonTapped() {
         view.endEditing(true)
         
@@ -134,6 +134,13 @@ class LoginViewController: UIViewController {
             loginViewModel?.getAuthToken(username, password)
         } else {
             loginViewModel?.showAlert()
+        }
+    }
+    
+    private func updateUI() {
+        self.activityIndicator.stopAnimating()
+        if loginViewModel?.postsAuthToken.isEmpty == false {
+            self.storeAuthToken(self.loginViewModel?.postsAuthToken)
         }
     }
     

@@ -17,4 +17,8 @@ enum AppConstants {
         static let hexStringTextPrimary = "#333A49"
         static let hexStringTextSecondary = "#69768C"
     }
+    
+    enum baseUrls {
+        static let appBaseUrl = "http://localhost:3002/"
+    }
 }

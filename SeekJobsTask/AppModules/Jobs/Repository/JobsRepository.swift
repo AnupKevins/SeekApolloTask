@@ -10,19 +10,24 @@ import Apollo
 import JobsAPI
 
 protocol JobsRepositoryProtocol {
-    func fetchActiveJobs(limit: Int, page: Int, completion: @escaping (Result<ActiveJobs, AppError>) -> Void)
+    func fetchActiveJobs(jobsRequest: JobsRequest, completion: @escaping (Result<ActiveJobs, AppError>) -> Void)
 }
 
 struct JobsRepository: JobsRepositoryProtocol {
-    func fetchActiveJobs(limit: Int, page: Int, completion: @escaping (Result<ActiveJobs, AppError>) -> Void) {
+    func fetchActiveJobs(jobsRequest: JobsRequest, completion: @escaping (Result<ActiveJobs, AppError>) -> Void) {
         
-        let query = GetJobsQuery(limit: .some(limit), page: .some(page))
+        let query = GetJobsQuery(
+            limit: .some(jobsRequest.limit),
+            page: .some(jobsRequest.page)
+        )
         
-        NetworkService.shared.apollo.fetch(query: query, cachePolicy: .fetchIgnoringCacheData) { result in
-            switch result {
-            case .success(let graphQLResult):
+        let networkService = NetworkService.shared
             
-                if let active = graphQLResult.data?.active {
+        networkService.fetchDataWithGraphQLQuery(query: query) { result in
+            switch result {
+            case .success(let data):
+            
+                if let active = data?.active {
                     
                     let jobsArr = getJobs(active: active)
                     let activeJobs = ActiveJobs(hasNext: active.hasNext, jobs: jobsArr)
@@ -45,7 +50,7 @@ struct JobsRepository: JobsRepositoryProtocol {
         }
     }
     
-   private func getJobs(active: GetJobsQuery.Data.Active) -> [InternalJob] {
+    func getJobs(active: GetJobsQuery.Data.Active) -> [InternalJob] {
         guard let jobs = active.jobs else { return [] }
         return jobs.compactMap { job in
             InternalJob(
@@ -60,7 +65,7 @@ struct JobsRepository: JobsRepositoryProtocol {
         }
     }
     
-    private func getSalaryRange(salaryRange: GetJobsQuery.Data.Active.Job.SalaryRange?) -> SalaryRange? {
+    func getSalaryRange(salaryRange: GetJobsQuery.Data.Active.Job.SalaryRange?) -> SalaryRange? {
         
         return SalaryRange(max: salaryRange?.max, min: salaryRange?.min)
     }

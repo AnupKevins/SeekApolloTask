@@ -1,12 +1,8 @@
 import Apollo
 import Foundation
+import JobsAPI
 
 protocol Requestable {
-   
-    
-    var endpoint: String { get }
-    var parameters: [String: Any] { get }
-    var headers: [String: String]? { get }
     var baseUrl: URL { get }
 }
 
@@ -14,7 +10,7 @@ enum AppError: LocalizedError {
     case unknownError
     case networkError(status: Int, description: String)
     case dataError(description: String)
-
+    
     var localizedDescription: String {
         switch self {
         case .unknownError:
@@ -27,11 +23,71 @@ enum AppError: LocalizedError {
     }
 }
 
-final class NetworkService {
+protocol NetworkServiceProtocol {
+    
+    func setGraphQLURL(_ url: URL)
+    
+    func fetchDataWithGraphQLQuery<Query: GraphQLQuery>(
+        query: Query,
+        completion: @escaping (Result<Query.Data?, Error>) -> Void
+    )
+    
+    func performMutationWithGraphQLQuery<Mutation: GraphQLMutation>(
+        mutation: Mutation,
+        completion: @escaping (Result<Mutation.Data?, Error>) -> Void
+    )
+}
+
+class NetworkService: NetworkServiceProtocol {
     
     static let shared = NetworkService()
     
-    private(set) var apollo = ApolloClient(url: URL(string: "http://localhost:3002/")!)
+    private(set) var apollo: ApolloClient?
     
-    private init() { }
+    private init() {
+        let baseUrl = URL(string: AppConstants.baseUrls.appBaseUrl)!
+        self.apollo = ApolloClient(url: baseUrl)
+    }
+    
+    func setGraphQLURL(_ url: URL) {
+        apollo = ApolloClient(url: url)
+    }
+    
+    func fetchDataWithGraphQLQuery<Query: GraphQLQuery>(
+        query: Query,
+        completion: @escaping (Result<Query.Data?, Error>) -> Void
+    ) {
+        self.apollo?.fetch(query: query) { result in
+            switch result {
+            case .success(let graphQLResult):
+                
+                DispatchQueue.main.async {
+                    completion(.success(graphQLResult.data))
+                }
+                
+            case .failure(let error):
+                print("Error: \(error)")
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func performMutationWithGraphQLQuery<Mutation: GraphQLMutation>(
+        mutation: Mutation,
+        completion: @escaping (Result<Mutation.Data?, Error>) -> Void
+    ) {
+        self.apollo?.perform(mutation: mutation) { result in
+            switch result {
+            case .success(let graphQLResult):
+                
+                DispatchQueue.main.async {
+                    completion(.success(graphQLResult.data))
+                }
+                
+            case .failure(let error):
+                print("Error: \(error)")
+                completion(.failure(error))
+            }
+        }
+    }
 }

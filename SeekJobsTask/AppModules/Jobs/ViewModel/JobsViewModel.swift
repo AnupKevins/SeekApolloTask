@@ -39,7 +39,9 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
         
         let limit = JobsConstants.dataConstants.itemLimits
         
-        self.jobsRepositoryProtocol?.fetchActiveJobs(limit: limit, page: page, completion: { [weak self] result in
+        let jobRequest = JobsRequest(limit: limit, page: page)
+        
+        self.jobsRepositoryProtocol?.fetchActiveJobs(jobsRequest: jobRequest, completion: { [weak self] result in
             switch result {
             case .success(let activeJobs):
                 self?.performActionOnSuccess(activeJobs)
