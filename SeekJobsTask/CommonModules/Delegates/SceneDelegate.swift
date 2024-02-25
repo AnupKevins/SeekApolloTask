@@ -22,6 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UserDefaultManager.shared.clearUserData()
         #endif
         
+        if CommandLine.arguments.contains("--uitesting") {
+            // Skip the login flow and navigate to the desired screen
+            UserDefaultManager.shared.isLoggedIn = true
+        }
         setupRootViewController(windowScene)
     }
     

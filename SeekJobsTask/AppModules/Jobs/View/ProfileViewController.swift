@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     private lazy var usernameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "UsernameLabel"
         label.textColor = .white
         return label
     }()
@@ -26,6 +27,7 @@ class ProfileViewController: UIViewController {
         textField.layer.cornerRadius = 8
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.white.cgColor
+        textField.accessibilityIdentifier = "PasswordTextField"
         return textField
     }()
     
@@ -34,6 +36,7 @@ class ProfileViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(JobsConstants.textConstants.updatePasswordText, for: .normal)
         button.backgroundColor = HexColor.getUIColor(AppConstants.UIColors.hexStringActionButton)
+        button.accessibilityIdentifier = "UpdateButton"
         button.tintColor = .white
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 1
@@ -47,6 +50,7 @@ class ProfileViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(JobsConstants.textConstants.logoutText, for: .normal)
         button.backgroundColor = HexColor.getUIColor(AppConstants.UIColors.hexStringActionButton)
+        button.accessibilityIdentifier = "LogoutButton"
         button.tintColor = .white
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 1
@@ -106,6 +110,7 @@ class ProfileViewController: UIViewController {
             navigationController.navigationBar.tintColor = UIColor.white
             navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             navigationItem.title = JobsConstants.textConstants.userProfileText
+            navigationController.navigationBar.accessibilityIdentifier = "MyProfile"
         }
     }
     

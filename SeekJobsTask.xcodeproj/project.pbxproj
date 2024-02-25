@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		365E6DA02B8BAF010058B55C /* JobsViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6D9F2B8BAF010058B55C /* JobsViewControllerUITest.swift */; };
+		365E6DA32B8BB6C40058B55C /* ProfileViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DA22B8BB6C40058B55C /* ProfileViewControllerUITest.swift */; };
 		368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACEC82B88571C003A8435 /* AppDelegate.swift */; };
 		368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECA2B88571C003A8435 /* SceneDelegate.swift */; };
 		368ACECD2B88571C003A8435 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECC2B88571C003A8435 /* JobsViewController.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		365E6D9F2B8BAF010058B55C /* JobsViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerUITest.swift; sourceTree = "<group>"; };
+		365E6DA22B8BB6C40058B55C /* ProfileViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerUITest.swift; sourceTree = "<group>"; };
 		368ACEC52B88571C003A8435 /* SeekJobsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekJobsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368ACEC82B88571C003A8435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368ACECA2B88571C003A8435 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		365E6D9E2B8BAE850058B55C /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				365E6D9F2B8BAF010058B55C /* JobsViewControllerUITest.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		365E6DA12B8BB68F0058B55C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				365E6DA22B8BB6C40058B55C /* ProfileViewControllerUITest.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		368ACEBC2B88571C003A8435 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +215,8 @@
 		368ACEE82B885720003A8435 /* SeekJobsTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
+				365E6DA12B8BB68F0058B55C /* Profile */,
+				365E6D9E2B8BAE850058B55C /* Jobs */,
 				36CB18C72B8B9E1C00330CAF /* Login */,
 				368ACEE92B885720003A8435 /* SeekJobsTaskUITests.swift */,
 				368ACEEB2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift */,
@@ -675,9 +697,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365E6DA02B8BAF010058B55C /* JobsViewControllerUITest.swift in Sources */,
 				368ACEEA2B885720003A8435 /* SeekJobsTaskUITests.swift in Sources */,
 				36CB18C92B8B9E4800330CAF /* LoginViewControllerUITest.swift in Sources */,
 				368ACEEC2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift in Sources */,
+				365E6DA32B8BB6C40058B55C /* ProfileViewControllerUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
