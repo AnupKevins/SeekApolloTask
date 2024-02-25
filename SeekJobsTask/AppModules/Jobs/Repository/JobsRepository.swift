@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Apollo
 import JobsAPI
 
 protocol JobsRepositoryProtocol {
@@ -50,8 +49,12 @@ struct JobsRepository: JobsRepositoryProtocol {
         }
     }
     
-    func getJobs(active: GetJobsQuery.Data.Active) -> [InternalJob] {
+    private func getJobs(
+        active: GetJobsQuery.Data.Active
+    ) -> [InternalJob] {
+        
         guard let jobs = active.jobs else { return [] }
+        
         return jobs.compactMap { job in
             InternalJob(
                 id: job?._id,
@@ -65,7 +68,9 @@ struct JobsRepository: JobsRepositoryProtocol {
         }
     }
     
-    func getSalaryRange(salaryRange: GetJobsQuery.Data.Active.Job.SalaryRange?) -> SalaryRange? {
+    private func getSalaryRange(
+        salaryRange: GetJobsQuery.Data.Active.Job.SalaryRange?
+    ) -> SalaryRange? {
         
         return SalaryRange(max: salaryRange?.max, min: salaryRange?.min)
     }

@@ -11,43 +11,51 @@ import Combine
 class LoginViewModel: ObservableObject {
     
     var loginRepositoryProtocol: LoginRepositoryProtocol?
-    var coordinator: LoginCoordinator?
+    var coordinator: LoginCoordinatorProtocol?
     
-    let authTokenWillChange = PassthroughSubject<Void, Never>()
+   // let authTokenWillChange = PassthroughSubject<Void, Never>()
     
     private (set) var postsAuthToken: String = ""
     
     init(
-        coordinator: LoginCoordinator?,
+        coordinator: LoginCoordinatorProtocol?,
         loginRepositoryProtocol: LoginRepositoryProtocol?
     ) {
         self.coordinator = coordinator
         self.loginRepositoryProtocol = loginRepositoryProtocol
     }
     
-    func getAuthToken(_ username: String, _ password: String) {
+    func getAuthToken(
+        _ username: String,
+        _ password: String,
+        completion: @escaping (Result<String, AppError>) -> Void
+    ) {
         
         let loginRequest = LoginRequest(username: username, password: password)
         self.loginRepositoryProtocol?.authenticate(loginRequest: loginRequest, completion: { [weak self] result in
             
             switch result {
             case .success(let value):
-                self?.performActionOnSuccess(value)
-            case .failure(_):
-                self?.performActionOnFailure()
+               // self?.performActionOnSuccess(value)
+                self?.postsAuthToken = value
+                completion(.success(value))
+            case .failure(let error):
+                // self?.performActionOnFailure()
+                self?.showAlert()
+                completion(.failure(error))
             }
         })
     }
     
-    private func performActionOnSuccess(_ value: String) {
-        postsAuthToken = value
-        authTokenWillChange.send()
-    }
-    
-    private func performActionOnFailure() {
-        showAlert()
-        authTokenWillChange.send()
-    }
+//    private func performActionOnSuccess(_ value: String) {
+//        postsAuthToken = value
+//        authTokenWillChange.send()
+//    }
+//    
+//    private func performActionOnFailure() {
+//        showAlert()
+//        authTokenWillChange.send()
+//    }
     
 //    func navigateToHomeJobsScreen() {
 //        coordinator?.goToHomeCoordinator()
@@ -55,12 +63,13 @@ class LoginViewModel: ObservableObject {
     
     func validateUserCredentials(_ username: String, _ password: String) -> LoginValidation {
         if username.isEmpty || password.isEmpty {
+            self.showAlert()
             return .usernamePasswordEmpty
         }
         return .valid
     }
     
-    func showAlert() {
+    private func showAlert() {
         coordinator?.presentAlert(
             title: LoginConstants.Login.invalidCredentialTitle,
             message: LoginConstants.Login.invalidCredentialMessage

@@ -16,7 +16,7 @@ protocol LoginFactoryProtocol {
     
     static func createLoginViewController() -> LoginViewController
     
-    static func createLoginViewModel(loginCoordinator: LoginCoordinator) -> LoginViewModel
+    static func createLoginViewModel(loginCoordinator: LoginCoordinatorProtocol) -> LoginViewModel
     
     static func createLoginRepository() -> LoginRepositoryProtocol
 }
@@ -36,7 +36,7 @@ class LoginFactory: LoginFactoryProtocol {
         return LoginViewController()
     }
     
-    static func createLoginViewModel(loginCoordinator: LoginCoordinator) -> LoginViewModel {
+    static func createLoginViewModel(loginCoordinator: LoginCoordinatorProtocol) -> LoginViewModel {
         return LoginViewModel(
             coordinator: loginCoordinator,
             loginRepositoryProtocol: createLoginRepository()

@@ -48,11 +48,11 @@ class LoginViewController: UIViewController {
 
     var loginViewModel: LoginViewModel?
     
-    private var cancellables: Set<AnyCancellable> = []
+  //  private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewModel()
+     //   bindViewModel()
         configureUI()
         setupConstraints()
     }
@@ -100,15 +100,15 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
-    private func bindViewModel() {
-        loginViewModel?.authTokenWillChange.sink { [weak self] in
-            guard let self = self else {
-                return
-            }
-            updateUI()
-            
-        }.store(in: &cancellables)
-    }
+//    private func bindViewModel() {
+//        loginViewModel?.authTokenWillChange.sink { [weak self] in
+//            guard let self = self else {
+//                return
+//            }
+//            updateUI()
+//            
+//        }.store(in: &cancellables)
+//    }
     
     @objc private func loginButtonTapped() {
         view.endEditing(true)
@@ -131,17 +131,33 @@ class LoginViewController: UIViewController {
     ) {
         if validation == .valid {
             activityIndicator.startAnimating()
-            loginViewModel?.getAuthToken(username, password)
-        } else {
-            loginViewModel?.showAlert()
+            loginViewModel?.getAuthToken(username, password, completion: { [weak self] result in
+                
+                switch result {
+                case .success(let value):
+                   // self?.performActionOnSuccess(value)
+                    self?.updateUI(authToken: value)
+                case .failure(let error):
+                    // self?.performActionOnFailure()
+                    self?.hideAnimation()
+                    
+                }
+            })
         }
+//        else {
+//            loginViewModel?.showAlert()
+//        }
     }
     
-    private func updateUI() {
-        self.activityIndicator.stopAnimating()
+    private func updateUI(authToken: String) {
+        hideAnimation()
         if loginViewModel?.postsAuthToken.isEmpty == false {
             self.storeAuthToken(self.loginViewModel?.postsAuthToken)
         }
+    }
+    
+    private func hideAnimation() {
+        self.activityIndicator.stopAnimating()
     }
     
     private func storeAuthToken(_ token: String?) {

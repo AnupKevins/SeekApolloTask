@@ -8,7 +8,17 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: Coordinator {
+protocol LoginCoordinatorProtocol {
+    var navigationController : UINavigationController { get set }
+    
+    func start()
+    
+    func goToHomeCoordinator()
+    
+    func presentAlert(title: String, message: String)
+}
+
+class LoginCoordinator: LoginCoordinatorProtocol {
 
     var navigationController: UINavigationController
     

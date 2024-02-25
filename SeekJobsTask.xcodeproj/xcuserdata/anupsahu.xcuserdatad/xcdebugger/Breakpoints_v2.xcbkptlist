@@ -7,77 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6D53EF1E-05A6-4A73-B25F-34E5DFDA41E8"
+            uuid = "DBF66E4A-4668-4B9F-8762-57115A01291F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
+            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "fetchActiveJobs(jobsRequest:completion:)"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "testFetchDataFailure()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6D53EF1E-05A6-4A73-B25F-34E5DFDA41E8 - a5d37402ae586960"
+                  uuid = "DBF66E4A-4668-4B9F-8762-57115A01291F - 4eac7fcac3784c01"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  moduleName = "SeekJobsTaskTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "355">
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "515">
                </Location>
                <Location
-                  uuid = "6D53EF1E-05A6-4A73-B25F-34E5DFDA41E8 - a5d37402ae586960"
+                  uuid = "DBF66E4A-4668-4B9F-8762-57115A01291F - 4eac7fcac3784c64"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  moduleName = "SeekJobsTaskTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "800">
-               </Location>
-               <Location
-                  uuid = "6D53EF1E-05A6-4A73-B25F-34E5DFDA41E8 - a5d37402ae586941"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "355">
-               </Location>
-               <Location
-                  uuid = "6D53EF1E-05A6-4A73-B25F-34E5DFDA41E8 - a5d37402ae586941"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "800">
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "515">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -85,304 +55,161 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3200A39B-C9D4-4F94-B428-9EA6A1BA4FE6"
+            uuid = "7E22A3A1-7FDD-4978-975D-1E748514A00F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
+            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "testFetchDataFailure()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E22A3A1-7FDD-4978-975D-1E748514A00F - 4eac7fcac3784c85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  moduleName = "SeekJobsTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "882">
+               </Location>
+               <Location
+                  uuid = "7E22A3A1-7FDD-4978-975D-1E748514A00F - 4eac7fcac3784cf8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  moduleName = "SeekJobsTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "882">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3B59341-8512-46C7-8E61-070657D4A96D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeekJobsTask/CommonModules/Network/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "performMutationWithGraphQLQuery(mutation:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F5411DE-0820-413E-AC0B-D00D506DE811"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeekJobsTask/CommonModules/Network/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "performMutationWithGraphQLQuery(mutation:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8950BC4C-54FB-4DBF-9DFB-587CEB904747"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "testGetAuthTokenWithValidUser1()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8950BC4C-54FB-4DBF-9DFB-587CEB904747 - f8fb105ac0509676"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeekJobsTaskTests.LoginViewModelTest.testGetAuthTokenWithValidUser1() -&gt; ()"
+                  moduleName = "SeekJobsTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "8950BC4C-54FB-4DBF-9DFB-587CEB904747 - 764eb8674cfcafdb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testGetAuthTokenWithValidUser1() -&gt; ()"
+                  moduleName = "SeekJobsTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "241">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "208DFB0C-1DD8-4D32-80E2-AF2A38C0FB5A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "testGetAuthTokenWithValidUser1()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F42AFC9-E236-4FE3-8298-32F447531B6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "fetchActiveJobs(jobsRequest:completion:)"
+            landmarkName = "testGetAuthTokenWithValidUser1()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3200A39B-C9D4-4F94-B428-9EA6A1BA4FE6 - a5d37402ae587773"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "1265">
-               </Location>
-               <Location
-                  uuid = "3200A39B-C9D4-4F94-B428-9EA6A1BA4FE6 - a5d37402ae587750"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "1265">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B5EDAA1-954F-4CA8-A3C6-36D51B3487F7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "fetchActiveJobs(jobsRequest:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5B5EDAA1-954F-4CA8-A3C6-36D51B3487F7 - a5d37402ae58767b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "498">
-               </Location>
-               <Location
-                  uuid = "5B5EDAA1-954F-4CA8-A3C6-36D51B3487F7 - a5d37402ae587658"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "498">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A972EF20-F36B-409F-91E9-367678E1F8D5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "authenticate(loginRequest:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A972EF20-F36B-409F-91E9-367678E1F8D5 - d899e4d853ac7746"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "444">
-               </Location>
-               <Location
-                  uuid = "A972EF20-F36B-409F-91E9-367678E1F8D5 - 8acdf84d7c21be52"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.AuthMutation.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "209">
-               </Location>
-               <Location
-                  uuid = "A972EF20-F36B-409F-91E9-367678E1F8D5 - d899e4d853ac7746"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "283">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A252EC14-FE2C-42D8-90B8-1E2E6403B0E5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "authenticate(loginRequest:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A252EC14-FE2C-42D8-90B8-1E2E6403B0E5 - 8acdf84d7c21bff1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.AuthMutation.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "245">
-               </Location>
-               <Location
-                  uuid = "A252EC14-FE2C-42D8-90B8-1E2E6403B0E5 - 8acdf84d7c21bff1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.AuthMutation.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "280">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9E21E885-9E15-4821-9DE4-ADD1DCE2DF1B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "authenticate(loginRequest:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9E21E885-9E15-4821-9DE4-ADD1DCE2DF1B - 8acdf84d7c21bf2f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.AuthMutation.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "862">
-               </Location>
-               <Location
-                  uuid = "9E21E885-9E15-4821-9DE4-ADD1DCE2DF1B - 8acdf84d7c21bf2f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.AuthMutation.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.LoginRepository.authenticate(loginRequest: SeekJobsTask.LoginRequest, completion: (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Login/Repository/LoginRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "975">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14CBD3BF-5AA5-4C2D-A299-79DBA55683D4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "fetchActiveJobs(jobsRequest:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "14CBD3BF-5AA5-4C2D-A299-79DBA55683D4 - 901b2415370c7ad9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "493">
-               </Location>
-               <Location
-                  uuid = "14CBD3BF-5AA5-4C2D-A299-79DBA55683D4 - a5d37402ae5868cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;JobsAPI.GetJobsQuery.Data&gt;, Swift.Error&gt;) -&gt; () in SeekJobsTask.JobsRepository.fetchActiveJobs(jobsRequest: SeekJobsTask.JobsRequest, completion: (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SeekJobsTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTask/AppModules/Jobs/Repository/JobsRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "247">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

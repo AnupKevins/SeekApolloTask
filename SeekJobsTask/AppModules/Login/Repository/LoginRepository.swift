@@ -9,17 +9,24 @@ import Foundation
 import JobsAPI
 
 protocol LoginRepositoryProtocol {
+    var networkService : NetworkService { get set }
+    
     func authenticate(loginRequest: LoginRequest, completion: @escaping (Result<String, AppError>) -> Void)
 }
 
 struct LoginRepository: LoginRepositoryProtocol {
     
+   var networkService: NetworkService
+    
+    init(networkService: NetworkService = NetworkService.shared) {
+        self.networkService = networkService
+    }
+    
     func authenticate(loginRequest: LoginRequest, completion: @escaping (Result<String, AppError>) -> Void) {
         let mutation = AuthMutation(
             username: loginRequest.username, password: loginRequest.password
         )
-        //let networkService = NetworkService(request: loginRequest)
-        let networkService = NetworkService.shared
+        
         networkService.performMutationWithGraphQLQuery(mutation: mutation) { result in
             
             switch result {
