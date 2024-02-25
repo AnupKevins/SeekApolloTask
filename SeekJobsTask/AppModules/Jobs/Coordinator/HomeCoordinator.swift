@@ -8,7 +8,15 @@
 import Foundation
 import UIKit
 
-class HomeCoordinator: Coordinator {
+protocol HomeCoordinatorProtocol {
+    var navigationController : UINavigationController { get set }
+    
+    func start()
+    
+    func presentAlert(title: String, message: String)
+}
+
+class HomeCoordinator: HomeCoordinatorProtocol {
 
     var navigationController: UINavigationController
 
@@ -20,7 +28,9 @@ class HomeCoordinator: Coordinator {
         
         let jobsViewController = JobsFactory.createJobsViewController()
         
-        jobsViewController.jobsViewModel = JobsFactory.createJobsViewModel(homeCoordinator: self)
+        jobsViewController.jobsViewModel = JobsFactory.createJobsViewModel(
+            homeCoordinator: self
+        )
         
         navigationController.pushViewController(jobsViewController, animated: true)
     }

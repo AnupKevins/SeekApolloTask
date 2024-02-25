@@ -7,47 +7,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DBF66E4A-4668-4B9F-8762-57115A01291F"
+            uuid = "7C701CA7-D71A-4220-AF0D-99FF95F79461"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+            filePath = "SeekJobsTask/AppModules/Jobs/ViewModel/JobsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "testFetchDataFailure()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchAdditionalDataIfNeeded(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B91D27F6-4142-4177-BBA6-0BC8011A749A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeekJobsTaskTests/Jobs/JobsViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "testFetchAdditionalDataIfNeeded()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DBF66E4A-4668-4B9F-8762-57115A01291F - 4eac7fcac3784c01"
+                  uuid = "B91D27F6-4142-4177-BBA6-0BC8011A749A - 2ec4b87cfa27f6c0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.JobsViewModelTest.testFetchDataOnValidPagination() -&gt; ()"
                   moduleName = "SeekJobsTaskTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Jobs/JobsViewModelTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "515">
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "617">
                </Location>
                <Location
-                  uuid = "DBF66E4A-4668-4B9F-8762-57115A01291F - 4eac7fcac3784c64"
+                  uuid = "B91D27F6-4142-4177-BBA6-0BC8011A749A - b42a8ada542992c0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;SeekJobsTask.ActiveJobs, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.JobsViewModelTest.testFetchAdditionalDataIfNeeded() -&gt; ()"
                   moduleName = "SeekJobsTaskTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Jobs/JobsViewModelTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "515">
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "617">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,47 +71,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7E22A3A1-7FDD-4978-975D-1E748514A00F"
+            uuid = "01A17D7E-FC03-4689-8A62-FDB1525609DD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+            filePath = "SeekJobsTaskTests/Jobs/JobsViewModelTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "testFetchDataFailure()"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "fetchAdditionalDataWithHasNext(activeJobs:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7E22A3A1-7FDD-4978-975D-1E748514A00F - 4eac7fcac3784c85"
+                  uuid = "01A17D7E-FC03-4689-8A62-FDB1525609DD - 6a21899a858f93e7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  symbolName = "SeekJobsTaskTests.JobsViewModelTest.fetchAdditionalDataWithHasNext(activeJobs: SeekJobsTask.ActiveJobs) -&gt; ()"
                   moduleName = "SeekJobsTaskTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Jobs/JobsViewModelTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
-                  offsetFromSymbolStart = "882">
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "510">
                </Location>
                <Location
-                  uuid = "7E22A3A1-7FDD-4978-975D-1E748514A00F - 4eac7fcac3784cf8"
+                  uuid = "01A17D7E-FC03-4689-8A62-FDB1525609DD - 6a21899a858f93e7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testFetchDataFailure() -&gt; ()"
+                  symbolName = "SeekJobsTaskTests.JobsViewModelTest.fetchAdditionalDataWithHasNext(activeJobs: SeekJobsTask.ActiveJobs) -&gt; ()"
                   moduleName = "SeekJobsTaskTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Jobs/JobsViewModelTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "882">
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "754">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,112 +119,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3B59341-8512-46C7-8E61-070657D4A96D"
+            uuid = "53C6FB8F-1F1E-4626-9E69-E4A6294C7C74"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/CommonModules/Network/NetworkService.swift"
+            filePath = "SeekJobsTask/AppModules/Jobs/ViewModel/JobsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "performMutationWithGraphQLQuery(mutation:completion:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "fetchAdditionalDataIfNeeded(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4F5411DE-0820-413E-AC0B-D00D506DE811"
+            uuid = "24E45FB5-3796-44A6-A598-3E5F3D79B090"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTask/CommonModules/Network/NetworkService.swift"
+            filePath = "SeekJobsTask/AppModules/Jobs/ViewModel/JobsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "performMutationWithGraphQLQuery(mutation:completion:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchAdditionalDataIfNeeded(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8950BC4C-54FB-4DBF-9DFB-587CEB904747"
+            uuid = "B386C13E-FE68-4195-955D-2BEFB5CAFF1B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
+            filePath = "SeekJobsTaskTests/Login/CoordinatorTests/LoginCoordinatorTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "testGetAuthTokenWithValidUser1()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8950BC4C-54FB-4DBF-9DFB-587CEB904747 - f8fb105ac0509676"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SeekJobsTaskTests.LoginViewModelTest.testGetAuthTokenWithValidUser1() -&gt; ()"
-                  moduleName = "SeekJobsTaskTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "344">
-               </Location>
-               <Location
-                  uuid = "8950BC4C-54FB-4DBF-9DFB-587CEB904747 - 764eb8674cfcafdb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, SeekJobsTask.AppError&gt;) -&gt; () in SeekJobsTaskTests.LoginViewModelTest.testGetAuthTokenWithValidUser1() -&gt; ()"
-                  moduleName = "SeekJobsTaskTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anupsahu/Documents/iOSProjectsDemo/SeekAssignment/SeekiOSAssignment/SeekJobsTask/SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "241">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "208DFB0C-1DD8-4D32-80E2-AF2A38C0FB5A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "testGetAuthTokenWithValidUser1()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4F42AFC9-E236-4FE3-8298-32F447531B6F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeekJobsTaskTests/Login/ViewModelTests/LoginViewModelTest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "testGetAuthTokenWithValidUser1()"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "testPresentAlert()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

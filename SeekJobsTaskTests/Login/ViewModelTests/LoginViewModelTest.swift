@@ -22,7 +22,8 @@ final class LoginViewModelTest: XCTestCase {
             URL(string: AppConstants.baseUrls.appBaseUrl)!
         )
         viewModel = LoginViewModel(
-            coordinator: mockLoginCoordinator, loginRepositoryProtocol: loginRepository)
+            coordinator: mockLoginCoordinator, loginRepositoryProtocol: loginRepository
+        )
     }
     
     func testGetAuthTokenWithValidUser1() {

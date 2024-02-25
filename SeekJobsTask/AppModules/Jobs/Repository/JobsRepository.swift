@@ -9,10 +9,19 @@ import Foundation
 import JobsAPI
 
 protocol JobsRepositoryProtocol {
+    var networkService : NetworkService { get set }
+    
     func fetchActiveJobs(jobsRequest: JobsRequest, completion: @escaping (Result<ActiveJobs, AppError>) -> Void)
 }
 
 struct JobsRepository: JobsRepositoryProtocol {
+    
+    var networkService: NetworkService
+    
+    init(networkService: NetworkService = NetworkService.shared) {
+        self.networkService = networkService
+    }
+    
     func fetchActiveJobs(jobsRequest: JobsRequest, completion: @escaping (Result<ActiveJobs, AppError>) -> Void) {
         
         let query = GetJobsQuery(
@@ -20,12 +29,10 @@ struct JobsRepository: JobsRepositoryProtocol {
             page: .some(jobsRequest.page)
         )
         
-        let networkService = NetworkService.shared
-            
         networkService.fetchDataWithGraphQLQuery(query: query) { result in
             switch result {
             case .success(let data):
-            
+                
                 if let active = data?.active {
                     
                     let jobsArr = getJobs(active: active)
@@ -33,8 +40,8 @@ struct JobsRepository: JobsRepositoryProtocol {
                     completion(.success(activeJobs))
                 } else {
                     let appError = AppError.dataError(
-                         description: "Invalid Response"
-                     )
+                        description: "Invalid Response"
+                    )
                     completion(.failure(appError))
                 }
                 
@@ -42,8 +49,8 @@ struct JobsRepository: JobsRepositoryProtocol {
                 // Handle network or other errors
                 let appError = AppError.dataError(
                     description: error.localizedDescription
-                 )
-                 
+                )
+                
                 completion(.failure(appError))
             }
         }

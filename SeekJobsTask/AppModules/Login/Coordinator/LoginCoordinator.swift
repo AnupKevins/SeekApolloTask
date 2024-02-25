@@ -13,8 +13,6 @@ protocol LoginCoordinatorProtocol {
     
     func start()
     
-    func goToHomeCoordinator()
-    
     func presentAlert(title: String, message: String)
 }
 
@@ -36,15 +34,6 @@ class LoginCoordinator: LoginCoordinatorProtocol {
         )
         
         navigationController.pushViewController(loginViewController, animated: true)
-    }
-    
-    func goToHomeCoordinator() {
-
-        let homeCoordinator = JobsFactory.createHomeCoordinator(
-            navigationController: self.navigationController
-        )
-        
-        homeCoordinator.start()
     }
     
     func presentAlert(title: String, message: String) {

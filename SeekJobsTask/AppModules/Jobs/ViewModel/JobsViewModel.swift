@@ -9,32 +9,32 @@ import Foundation
 import Combine
 
 protocol JobsViewModelProtocol {
-    func fetchActiveJobs(page: Int)
+    func fetchActiveJobs(page: Int, completion: @escaping (Result<ActiveJobs, AppError>) -> Void)
 }
 
 class JobsViewModel: ObservableObject, JobsViewModelProtocol {
 
-    var coordinator: HomeCoordinator?
+    var coordinator: HomeCoordinatorProtocol?
     var jobsRepositoryProtocol: JobsRepositoryProtocol?
     var jobsSubject = PassthroughSubject<Void, Never>()
     private (set) var postsJobs: ActiveJobs?
     private (set) var jobList: [InternalJob] = []
-    private var currentPage = 1
+    var currentPage: Int = 1
     var isLoading = false
         
     init(
-        coordinator: HomeCoordinator?,
+        coordinator: HomeCoordinatorProtocol?,
         jobsRepositoryProtocol: JobsRepositoryProtocol?
     ) {
         self.coordinator = coordinator
         self.jobsRepositoryProtocol = jobsRepositoryProtocol
     }
     
-    func fetchActiveJobs(page: Int) {
+    func fetchActiveJobs(page: Int, completion: @escaping (Result<ActiveJobs, AppError>) -> Void) {
         
-        guard validateHasNext() else {
-            return
-        }
+//        guard validateHasNext() else {
+//            return
+//        }
         isLoading = true
         
         let limit = JobsConstants.dataConstants.itemLimits
@@ -45,8 +45,10 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
             switch result {
             case .success(let activeJobs):
                 self?.performActionOnSuccess(activeJobs)
-            case .failure(_):
-                self?.performActionOnFailure()
+                completion(.success(activeJobs))
+            case .failure(let error):
+               //  self?.performActionOnFailure()
+                completion(.failure(error))
             }
         })
     }
@@ -54,9 +56,10 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
     func fetchAdditionalDataIfNeeded(for indexPath: IndexPath) {
         let shouldLoadMore = indexPath.row == jobList.count - 1 && !isLoading
 
-        if shouldLoadMore {
+        if shouldLoadMore && validateHasNext() {
             currentPage += 1
-            fetchActiveJobs(page: currentPage)
+            //fetchActiveJobs(page: currentPage)
+            jobsSubject.send()
         }
     }
     
@@ -64,17 +67,15 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
         return postsJobs?.hasNext ?? true
     }
     
-    func performActionOnSuccess(_ activeJobs: ActiveJobs) {
-        sendValue(activeJobs)
+   private func performActionOnSuccess(_ activeJobs: ActiveJobs) {
+        updateJoblistAndPostJobs(activeJobs)
     }
     
-    func sendValue(_ value: ActiveJobs) {
+    private func updateJoblistAndPostJobs(_ value: ActiveJobs) {
         postsJobs = value
         if let jobs = value.jobs {
             jobList.append(contentsOf: jobs)
         }
-        
-        jobsSubject.send()
     }
     
     private func performActionOnFailure() {

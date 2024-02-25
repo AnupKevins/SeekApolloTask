@@ -13,14 +13,19 @@ class MockLoginCoordinator: LoginCoordinatorProtocol {
     
     var navigationController: UINavigationController
     
-    init() {
-        self.navigationController = UINavigationController()
+    var presentedTitle: String?
+    var presentedMessage: String?
+    var didPresentAlert = false
+    
+    init(navigationController: UINavigationController = UINavigationController()) {
+        self.navigationController = navigationController
     }
     
     func start() {}
-    // Implement other coordinator methods for testing, if needed
     
-    func goToHomeCoordinator() {}
-    
-    func presentAlert(title: String, message: String) {}
+    func presentAlert(title: String, message: String) {
+        presentedTitle = title
+        presentedMessage = message
+        didPresentAlert = true
+    }
 }

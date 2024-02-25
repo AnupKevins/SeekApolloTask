@@ -34,11 +34,20 @@ class JobsViewController: UIViewController {
         configureUI()
         setupSubscriptions()
         fetchJobs()
-        
     }
     
     func fetchJobs() {
-        jobsViewModel?.fetchActiveJobs(page: 1)
+
+        jobsViewModel?.fetchActiveJobs(page: jobsViewModel?.currentPage ?? 1 , completion: { [weak self] result in
+            
+            switch result {
+            case .success(_):
+                self?.reloadTableView()
+            case .failure(let error):
+                print(error)
+                
+            }
+        })
     }
     
     func setupSubscriptions() {
@@ -47,7 +56,7 @@ class JobsViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            self.reloadTableView()
+            self.fetchJobs()
         }.store(in: &cancellables)
     }
     
@@ -135,8 +144,12 @@ extension JobsViewController: UIScrollViewDelegate {
         let contentHeight = scrollView.contentSize.height
         let screenHeight = scrollView.frame.size.height
         let threshold: CGFloat = 300
-        if offsetY > contentHeight - screenHeight - threshold, let joblist = jobsViewModel?.jobList {
-            jobsViewModel?.fetchAdditionalDataIfNeeded(for: IndexPath(row: joblist.count - 1, section: 0))
+        if offsetY > contentHeight - screenHeight - threshold, 
+            let joblist = jobsViewModel?.jobList {
+            
+             jobsViewModel?.fetchAdditionalDataIfNeeded(
+                for: IndexPath(row: joblist.count - 1, section: 0)
+             )
         }
     }
 

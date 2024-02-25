@@ -30,6 +30,10 @@
 		368ACF182B887E29003A8435 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACF172B887E29003A8435 /* JobsViewModel.swift */; };
 		36CB18A62B8B0DF000330CAF /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18A52B8B0DF000330CAF /* LoginViewModelTest.swift */; };
 		36CB18A92B8B0F8D00330CAF /* MockLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18A82B8B0F8D00330CAF /* MockLoginCoordinator.swift */; };
+		36CB18B02B8B48A700330CAF /* JobsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18AF2B8B48A700330CAF /* JobsViewModelTest.swift */; };
+		36CB18B22B8B496100330CAF /* MockHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18B12B8B496100330CAF /* MockHomeCoordinator.swift */; };
+		36CB18B52B8B58A900330CAF /* LoginCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18B42B8B58A900330CAF /* LoginCoordinatorTest.swift */; };
+		36CB18B92B8B657000330CAF /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18B82B8B657000330CAF /* HomeCoordinatorTests.swift */; };
 		36DD28B12B89F12000686F6E /* JobsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B02B89F12000686F6E /* JobsConstants.swift */; };
 		36DD28B42B89F9F300686F6E /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B32B89F9F300686F6E /* JobsRepository.swift */; };
 		36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B62B89FA2300686F6E /* ActiveJobs.swift */; };
@@ -86,6 +90,10 @@
 		368ACF172B887E29003A8435 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		36CB18A52B8B0DF000330CAF /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		36CB18A82B8B0F8D00330CAF /* MockLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginCoordinator.swift; sourceTree = "<group>"; };
+		36CB18AF2B8B48A700330CAF /* JobsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModelTest.swift; sourceTree = "<group>"; };
+		36CB18B12B8B496100330CAF /* MockHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeCoordinator.swift; sourceTree = "<group>"; };
+		36CB18B42B8B58A900330CAF /* LoginCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorTest.swift; sourceTree = "<group>"; };
+		36CB18B82B8B657000330CAF /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
 		36DD28B02B89F12000686F6E /* JobsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsConstants.swift; sourceTree = "<group>"; };
 		36DD28B32B89F9F300686F6E /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		36DD28B62B89FA2300686F6E /* ActiveJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobs.swift; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		368ACEDE2B885720003A8435 /* SeekJobsTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				36CB18AE2B8B487F00330CAF /* Jobs */,
 				36CB18A72B8B0F1200330CAF /* Mocks */,
 				368ACEDF2B885720003A8435 /* SeekJobsTaskTests.swift */,
 				36CB18A22B8B0DA200330CAF /* Login */,
@@ -244,6 +253,7 @@
 		36CB18A22B8B0DA200330CAF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				36CB18B32B8B587500330CAF /* CoordinatorTests */,
 				36CB18A32B8B0DB600330CAF /* ViewModelTests */,
 			);
 			path = Login;
@@ -261,8 +271,42 @@
 			isa = PBXGroup;
 			children = (
 				36CB18A82B8B0F8D00330CAF /* MockLoginCoordinator.swift */,
+				36CB18B12B8B496100330CAF /* MockHomeCoordinator.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		36CB18AE2B8B487F00330CAF /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18B72B8B652500330CAF /* CoordinatorTests */,
+				36CB18B62B8B651100330CAF /* ViewModelTests */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		36CB18B32B8B587500330CAF /* CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18B42B8B58A900330CAF /* LoginCoordinatorTest.swift */,
+			);
+			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		36CB18B62B8B651100330CAF /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18AF2B8B48A700330CAF /* JobsViewModelTest.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		36CB18B72B8B652500330CAF /* CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18B82B8B657000330CAF /* HomeCoordinatorTests.swift */,
+			);
+			path = CoordinatorTests;
 			sourceTree = "<group>";
 		};
 		36DD28A62B89EBD800686F6E /* Factory */ = {
@@ -562,8 +606,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CB18B02B8B48A700330CAF /* JobsViewModelTest.swift in Sources */,
 				36CB18A62B8B0DF000330CAF /* LoginViewModelTest.swift in Sources */,
+				36CB18B92B8B657000330CAF /* HomeCoordinatorTests.swift in Sources */,
 				36CB18A92B8B0F8D00330CAF /* MockLoginCoordinator.swift in Sources */,
+				36CB18B22B8B496100330CAF /* MockHomeCoordinator.swift in Sources */,
+				36CB18B52B8B58A900330CAF /* LoginCoordinatorTest.swift in Sources */,
 				368ACEE02B885720003A8435 /* SeekJobsTaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

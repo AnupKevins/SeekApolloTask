@@ -99,17 +99,7 @@ class LoginViewController: UIViewController {
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
-    
-//    private func bindViewModel() {
-//        loginViewModel?.authTokenWillChange.sink { [weak self] in
-//            guard let self = self else {
-//                return
-//            }
-//            updateUI()
-//            
-//        }.store(in: &cancellables)
-//    }
-    
+        
     @objc private func loginButtonTapped() {
         view.endEditing(true)
         
@@ -135,18 +125,12 @@ class LoginViewController: UIViewController {
                 
                 switch result {
                 case .success(let value):
-                   // self?.performActionOnSuccess(value)
                     self?.updateUI(authToken: value)
                 case .failure(let error):
-                    // self?.performActionOnFailure()
                     self?.hideAnimation()
-                    
                 }
             })
         }
-//        else {
-//            loginViewModel?.showAlert()
-//        }
     }
     
     private func updateUI(authToken: String) {
