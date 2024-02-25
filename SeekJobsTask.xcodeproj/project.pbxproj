@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		365E6DA02B8BAF010058B55C /* JobsViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6D9F2B8BAF010058B55C /* JobsViewControllerUITest.swift */; };
 		365E6DA32B8BB6C40058B55C /* ProfileViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DA22B8BB6C40058B55C /* ProfileViewControllerUITest.swift */; };
+		365E6DA52B8BBC0B0058B55C /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DA42B8BBC0A0058B55C /* JobDetailViewController.swift */; };
+		365E6DA72B8BBF0E0058B55C /* JobDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DA62B8BBF0E0058B55C /* JobDetailViewModel.swift */; };
+		365E6DA92B8BC0070058B55C /* JobDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DA82B8BC0070058B55C /* JobDetailModel.swift */; };
+		365E6DAB2B8BC91F0058B55C /* JobDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DAA2B8BC91E0058B55C /* JobDetailViewModelTests.swift */; };
+		365E6DAE2B8BCB8A0058B55C /* JobDetailViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DAD2B8BCB8A0058B55C /* JobDetailViewControllerUITest.swift */; };
+		365E6DB12B8BCEA70058B55C /* InternalJobTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E6DB02B8BCEA70058B55C /* InternalJobTest.swift */; };
 		368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACEC82B88571C003A8435 /* AppDelegate.swift */; };
 		368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECA2B88571C003A8435 /* SceneDelegate.swift */; };
 		368ACECD2B88571C003A8435 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368ACECC2B88571C003A8435 /* JobsViewController.swift */; };
@@ -75,6 +81,12 @@
 /* Begin PBXFileReference section */
 		365E6D9F2B8BAF010058B55C /* JobsViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerUITest.swift; sourceTree = "<group>"; };
 		365E6DA22B8BB6C40058B55C /* ProfileViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerUITest.swift; sourceTree = "<group>"; };
+		365E6DA42B8BBC0A0058B55C /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		365E6DA62B8BBF0E0058B55C /* JobDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewModel.swift; sourceTree = "<group>"; };
+		365E6DA82B8BC0070058B55C /* JobDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailModel.swift; sourceTree = "<group>"; };
+		365E6DAA2B8BC91E0058B55C /* JobDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewModelTests.swift; sourceTree = "<group>"; };
+		365E6DAD2B8BCB8A0058B55C /* JobDetailViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewControllerUITest.swift; sourceTree = "<group>"; };
+		365E6DB02B8BCEA70058B55C /* InternalJobTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalJobTest.swift; sourceTree = "<group>"; };
 		368ACEC52B88571C003A8435 /* SeekJobsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekJobsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368ACEC82B88571C003A8435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368ACECA2B88571C003A8435 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +178,22 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		365E6DAC2B8BCB520058B55C /* JobDetail */ = {
+			isa = PBXGroup;
+			children = (
+				365E6DAD2B8BCB8A0058B55C /* JobDetailViewControllerUITest.swift */,
+			);
+			path = JobDetail;
+			sourceTree = "<group>";
+		};
+		365E6DAF2B8BCE780058B55C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				365E6DB02B8BCEA70058B55C /* InternalJobTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		368ACEBC2B88571C003A8435 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +243,7 @@
 		368ACEE82B885720003A8435 /* SeekJobsTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
+				365E6DAC2B8BCB520058B55C /* JobDetail */,
 				365E6DA12B8BB68F0058B55C /* Profile */,
 				365E6D9E2B8BAE850058B55C /* Jobs */,
 				36CB18C72B8B9E1C00330CAF /* Login */,
@@ -315,6 +344,7 @@
 		36CB18AE2B8B487F00330CAF /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				365E6DAF2B8BCE780058B55C /* Model */,
 				36CB18BE2B8B6D6A00330CAF /* View */,
 				36CB18B72B8B652500330CAF /* CoordinatorTests */,
 				36CB18B62B8B651100330CAF /* ViewModelTests */,
@@ -335,6 +365,7 @@
 			children = (
 				36CB18AF2B8B48A700330CAF /* JobsViewModelTest.swift */,
 				36CB18C52B8B898300330CAF /* ProfileViewModelTests.swift */,
+				365E6DAA2B8BC91E0058B55C /* JobDetailViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -426,6 +457,7 @@
 				36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */,
 				368ACECC2B88571C003A8435 /* JobsViewController.swift */,
 				36CB18C12B8B792B00330CAF /* ProfileViewController.swift */,
+				365E6DA42B8BBC0A0058B55C /* JobDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +467,7 @@
 			children = (
 				368ACF172B887E29003A8435 /* JobsViewModel.swift */,
 				36CB18C32B8B7B7600330CAF /* ProfileViewModel.swift */,
+				365E6DA62B8BBF0E0058B55C /* JobDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -480,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				36DD28B62B89FA2300686F6E /* ActiveJobs.swift */,
+				365E6DA82B8BC0070058B55C /* JobDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -659,14 +693,17 @@
 				368ACF102B887BA7003A8435 /* AppCoordinator.swift in Sources */,
 				36DD28B92B8A5A8500686F6E /* LoginRequest.swift in Sources */,
 				36FF5D3F2B89204C005EEE0E /* UserDefaultsManager.swift in Sources */,
+				365E6DA72B8BBF0E0058B55C /* JobDetailViewModel.swift in Sources */,
 				368ACF0C2B8877A9003A8435 /* HexColors.swift in Sources */,
 				368ACF122B887BEB003A8435 /* LoginCoordinator.swift in Sources */,
 				36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */,
 				36CB18C42B8B7B7600330CAF /* ProfileViewModel.swift in Sources */,
 				368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */,
 				36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */,
+				365E6DA92B8BC0070058B55C /* JobDetailModel.swift in Sources */,
 				36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */,
 				368ACF142B887C4E003A8435 /* LoginViewModel.swift in Sources */,
+				365E6DA52B8BBC0B0058B55C /* JobDetailViewController.swift in Sources */,
 				368ACF0A2B8873ED003A8435 /* AppConstants.swift in Sources */,
 				36DD28BB2B8A613800686F6E /* JobsRequest.swift in Sources */,
 				368ACF162B887DC7003A8435 /* HomeCoordinator.swift in Sources */,
@@ -684,6 +721,8 @@
 				36CB18B02B8B48A700330CAF /* JobsViewModelTest.swift in Sources */,
 				36CB18A62B8B0DF000330CAF /* LoginViewModelTest.swift in Sources */,
 				36CB18B92B8B657000330CAF /* HomeCoordinatorTests.swift in Sources */,
+				365E6DB12B8BCEA70058B55C /* InternalJobTest.swift in Sources */,
+				365E6DAB2B8BC91F0058B55C /* JobDetailViewModelTests.swift in Sources */,
 				36CB18A92B8B0F8D00330CAF /* MockLoginCoordinator.swift in Sources */,
 				36CB18BD2B8B683600330CAF /* AppCoordinatorTests.swift in Sources */,
 				36CB18C02B8B6D9F00330CAF /* JobsTableViewCellTests.swift in Sources */,
@@ -702,6 +741,7 @@
 				36CB18C92B8B9E4800330CAF /* LoginViewControllerUITest.swift in Sources */,
 				368ACEEC2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift in Sources */,
 				365E6DA32B8BB6C40058B55C /* ProfileViewControllerUITest.swift in Sources */,
+				365E6DAE2B8BCB8A0058B55C /* JobDetailViewControllerUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

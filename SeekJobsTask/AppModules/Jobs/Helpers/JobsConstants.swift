@@ -21,6 +21,8 @@ enum JobsConstants {
         static let userProfileText = "Profile"
         static let updatePasswordText = "Update Password"
         static let logoutText = "Logout"
+        static let jobsApply = "Apply Job"
+        static let jobsDetailTitle = "Job Detail"
     }
     
     enum dataConstants {

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MockHomeCoordinator: HomeCoordinatorProtocol {
-    
+  
     var navigationController: UINavigationController
     
     init() {
@@ -22,5 +22,7 @@ class MockHomeCoordinator: HomeCoordinatorProtocol {
     func presentAlert(title: String, message: String) {}
     
     func navigateToProfile() {}
+    
+    func navigateToJobDetail(jobDetailModel: SeekJobsTask.JobDetailModel) {}
 }
 

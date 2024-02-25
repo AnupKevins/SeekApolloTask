@@ -56,7 +56,6 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
 
         if shouldLoadMore && validateHasNext() {
             currentPage += 1
-            //fetchActiveJobs(page: currentPage)
             jobsSubject.send()
         }
     }
@@ -89,5 +88,14 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
     
     func navigateToProfile() {
         coordinator?.navigateToProfile()
+    }
+    
+    func navigateToJobDetail(job: InternalJob) {
+        let jobDetailModel = JobDetailModel(
+            jobTitle: job.positionTitle,
+            jobDescription: job.description,
+            jobLocation: job.locationString
+        )
+        coordinator?.navigateToJobDetail(jobDetailModel: jobDetailModel)
     }
 }

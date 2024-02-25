@@ -49,4 +49,16 @@ final class HomeCoordinatorTests: XCTestCase {
         
         XCTAssertTrue(navigationController.topViewController is ProfileViewController, "Top view controller should be ProfileViewController")
     }
+    
+    func testNavigateToJobDetailSuccessful() {
+        // Given
+        let navigationController = UINavigationController()
+        let coordinator = HomeCoordinator(navigationController: navigationController)
+        
+        let jobDetailModel = JobDetailModel()
+        
+        coordinator.navigateToJobDetail(jobDetailModel: jobDetailModel)
+        
+        XCTAssertTrue(navigationController.topViewController is JobDetailViewController, "Top view controller should be JobDetailViewController")
+    }
 }

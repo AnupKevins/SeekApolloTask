@@ -18,18 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        #if DEBUG
-        UserDefaultManager.shared.clearUserData()
-        #endif
-        
-        if CommandLine.arguments.contains("--uitesting") {
-            // Skip the login flow and navigate to the desired screen
-            UserDefaultManager.shared.isLoggedIn = true
-        }
+        setupForUITestCases()
         setupRootViewController(windowScene)
     }
     
-    func setupRootViewController(_ windowScene: UIWindowScene) {
+    private func setupRootViewController(_ windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
         
         let navigationController = getNavUpdateAppCoordinator()
@@ -46,11 +39,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = navigationController
     }
     
-    func getNavUpdateAppCoordinator() -> UINavigationController {
+    private func getNavUpdateAppCoordinator() -> UINavigationController {
         let navigationController = UINavigationController()
         appCoordinator = AppCoordinator(navigationController: navigationController)
         appCoordinator?.start()
         return navigationController
+    }
+    
+    fileprivate func setupForUITestCases() {
+        if CommandLine.arguments.contains("--uitesting") {
+            // Skip the login flow and navigate to the desired screen
+            UserDefaultManager.shared.isLoggedIn = true
+        } else if CommandLine.arguments.contains("login_uitesting") {
+            UserDefaultManager.shared.clearUserData()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

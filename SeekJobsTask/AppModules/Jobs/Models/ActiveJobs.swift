@@ -23,6 +23,13 @@ struct InternalJob {
     var industry, location: Int?
     var positionTitle: String?
     var salaryRange: SalaryRange?
+    
+    var locationString: String? {
+        if let location = location {
+            return String(location)
+        }
+        return ""
+    }
 }
 
 // MARK: - SalaryRange

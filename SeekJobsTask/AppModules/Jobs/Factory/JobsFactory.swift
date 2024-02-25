@@ -22,6 +22,9 @@ protocol JobsFactoryProtocol {
     
     static func createProfileViewController() -> ProfileViewController
     static func createProfileViewModel() -> ProfileViewModel
+    
+    static func createJobDetailViewController() -> JobDetailViewController
+    static func createJobDetailViewModel(jobDetailModel: JobDetailModel) -> JobDetailViewModel
 }
  
 class JobsFactory: JobsFactoryProtocol {
@@ -56,6 +59,13 @@ class JobsFactory: JobsFactoryProtocol {
     
     static func createProfileViewModel() -> ProfileViewModel {
         return ProfileViewModel()
+    }
+    
+    static func createJobDetailViewController() -> JobDetailViewController {
+        return JobDetailViewController()
+    }
+    static func createJobDetailViewModel(jobDetailModel: JobDetailModel) -> JobDetailViewModel {
+        return JobDetailViewModel(jobDetailModel: jobDetailModel)
     }
     
 }

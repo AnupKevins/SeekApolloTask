@@ -16,6 +16,8 @@ protocol HomeCoordinatorProtocol {
     func presentAlert(title: String, message: String)
     
     func navigateToProfile()
+    
+    func navigateToJobDetail(jobDetailModel: JobDetailModel)
 }
 
 class HomeCoordinator: HomeCoordinatorProtocol {
@@ -61,6 +63,13 @@ class HomeCoordinator: HomeCoordinatorProtocol {
         profileViewController.profileViewModel = JobsFactory.createProfileViewModel()
         
         navigationController.pushViewController(profileViewController, animated: true)
+    }
+    
+    func navigateToJobDetail(jobDetailModel: JobDetailModel) {
+        let jobsDetailViewController = JobsFactory.createJobDetailViewController()
+        jobsDetailViewController.jobDetailViewModel = JobsFactory.createJobDetailViewModel(jobDetailModel: jobDetailModel)
+        
+        navigationController.pushViewController(jobsDetailViewController, animated: true)
     }
 }
 

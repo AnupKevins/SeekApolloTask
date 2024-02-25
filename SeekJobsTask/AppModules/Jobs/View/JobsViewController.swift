@@ -133,7 +133,8 @@ extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected item: \(jobsViewModel?.jobList[indexPath.row])")
+        guard let job = jobsViewModel?.jobList[indexPath.row] else { return }
+        jobsViewModel?.navigateToJobDetail(job: job)
     }
     
     fileprivate func configureCell(_ indexPath: IndexPath, _ cell: JobsTableViewCell) {
