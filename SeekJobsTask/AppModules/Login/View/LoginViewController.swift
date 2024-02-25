@@ -125,7 +125,7 @@ class LoginViewController: UIViewController {
                 switch result {
                 case .success(let value):
                     self?.updateUI(authToken: value)
-                case .failure(let error):
+                case .failure(_):
                     self?.hideAnimation()
                 }
             })

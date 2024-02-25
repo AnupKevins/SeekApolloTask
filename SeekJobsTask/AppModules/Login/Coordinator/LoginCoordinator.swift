@@ -50,7 +50,7 @@ class LoginCoordinator: LoginCoordinatorProtocol {
                 self?.navigationController.topViewController?.dismiss(animated: true)
             }
         )
-        
+        okAction.accessibilityLabel = "OKButtonIdentifier"
         alertController.addAction(okAction)
         navigationController.topViewController?.present(alertController, animated: true, completion: nil)
     }

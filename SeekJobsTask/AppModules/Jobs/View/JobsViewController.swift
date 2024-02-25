@@ -17,6 +17,7 @@ class JobsViewController: UIViewController {
             AppConstants.UIColors.hexStringTableBackground
         )
         tableView.separatorStyle = .none
+        tableView.accessibilityIdentifier = "JobsTable"
         return tableView
     }()
     
@@ -97,6 +98,7 @@ class JobsViewController: UIViewController {
             navigationController.navigationBar.tintColor = UIColor.white
             navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             navigationItem.title = JobsConstants.textConstants.jobsTitle
+            navigationController.navigationBar.accessibilityIdentifier = "ActiveJobs"
         }
     }
     
