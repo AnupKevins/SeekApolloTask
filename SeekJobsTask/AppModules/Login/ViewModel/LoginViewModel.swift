@@ -37,6 +37,7 @@ class LoginViewModel: ObservableObject {
             case .success(let value):
                // self?.performActionOnSuccess(value)
                 self?.postsAuthToken = value
+                self?.storeAuthToken(token: value, username, password)
                 completion(.success(value))
             case .failure(let error):
                 // self?.performActionOnFailure()
@@ -73,5 +74,21 @@ class LoginViewModel: ObservableObject {
             title: LoginConstants.Login.invalidCredentialTitle,
             message: LoginConstants.Login.invalidCredentialMessage
         )
+    }
+    
+    private func storeAuthToken(
+        token: String?,
+        _ username: String,
+        _ password: String
+    ) {
+        if let token = token {
+            print("Token:\(token)")
+            print("username:\(username)")
+            print("password:\(password)")
+            UserDefaultManager.shared.authToken = token
+            UserDefaultManager.shared.isLoggedIn = true
+            UserDefaultManager.shared.username = username
+            UserDefaultManager.shared.userPassword = password
+        }
     }
 }

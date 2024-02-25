@@ -135,9 +135,7 @@ class LoginViewController: UIViewController {
     
     private func updateUI(authToken: String) {
         hideAnimation()
-        if loginViewModel?.postsAuthToken.isEmpty == false {
-            self.storeAuthToken(self.loginViewModel?.postsAuthToken)
-        }
+        setupHomeCoordinatorAsRoot()
     }
     
     private func hideAnimation() {

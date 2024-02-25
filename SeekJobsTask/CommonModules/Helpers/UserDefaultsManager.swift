@@ -14,6 +14,8 @@ class UserDefaultManager {
     private enum Keys {
         static let authToken = "userAuthToken"
         static let isLoggedIn = "isLoggedIn"
+        static let userName = "userName"
+        static let userPassword = "userPassword"
     }
 
     private let userDefaults = UserDefaults.standard
@@ -24,6 +26,24 @@ class UserDefaultManager {
         }
         set {
             userDefaults.set(newValue, forKey: Keys.authToken)
+        }
+    }
+    
+    var username: String? {
+        get {
+            return userDefaults.string(forKey: Keys.userName)
+        }
+        set {
+            userDefaults.set(newValue, forKey: Keys.userName)
+        }
+    }
+    
+    var userPassword: String? {
+        get {
+            return userDefaults.string(forKey: Keys.userPassword)
+        }
+        set {
+            userDefaults.set(newValue, forKey: Keys.userPassword)
         }
     }
 
@@ -39,5 +59,7 @@ class UserDefaultManager {
     func clearUserData() {
         userDefaults.removeObject(forKey: Keys.authToken)
         userDefaults.removeObject(forKey: Keys.isLoggedIn)
+        userDefaults.removeObject(forKey: Keys.userName)
+        userDefaults.removeObject(forKey: Keys.userPassword)
     }
 }

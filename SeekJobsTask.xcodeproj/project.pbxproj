@@ -34,6 +34,10 @@
 		36CB18B22B8B496100330CAF /* MockHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18B12B8B496100330CAF /* MockHomeCoordinator.swift */; };
 		36CB18B52B8B58A900330CAF /* LoginCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18B42B8B58A900330CAF /* LoginCoordinatorTest.swift */; };
 		36CB18B92B8B657000330CAF /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18B82B8B657000330CAF /* HomeCoordinatorTests.swift */; };
+		36CB18BD2B8B683600330CAF /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18BC2B8B683600330CAF /* AppCoordinatorTests.swift */; };
+		36CB18C02B8B6D9F00330CAF /* JobsTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18BF2B8B6D9F00330CAF /* JobsTableViewCellTests.swift */; };
+		36CB18C22B8B792B00330CAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18C12B8B792B00330CAF /* ProfileViewController.swift */; };
+		36CB18C42B8B7B7600330CAF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18C32B8B7B7600330CAF /* ProfileViewModel.swift */; };
 		36DD28B12B89F12000686F6E /* JobsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B02B89F12000686F6E /* JobsConstants.swift */; };
 		36DD28B42B89F9F300686F6E /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B32B89F9F300686F6E /* JobsRepository.swift */; };
 		36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B62B89FA2300686F6E /* ActiveJobs.swift */; };
@@ -94,6 +98,10 @@
 		36CB18B12B8B496100330CAF /* MockHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeCoordinator.swift; sourceTree = "<group>"; };
 		36CB18B42B8B58A900330CAF /* LoginCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorTest.swift; sourceTree = "<group>"; };
 		36CB18B82B8B657000330CAF /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
+		36CB18BC2B8B683600330CAF /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		36CB18BF2B8B6D9F00330CAF /* JobsTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCellTests.swift; sourceTree = "<group>"; };
+		36CB18C12B8B792B00330CAF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		36CB18C32B8B7B7600330CAF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		36DD28B02B89F12000686F6E /* JobsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsConstants.swift; sourceTree = "<group>"; };
 		36DD28B32B89F9F300686F6E /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		36DD28B62B89FA2300686F6E /* ActiveJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobs.swift; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 		368ACEDE2B885720003A8435 /* SeekJobsTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				36CB18BA2B8B67FB00330CAF /* Common */,
 				36CB18AE2B8B487F00330CAF /* Jobs */,
 				36CB18A72B8B0F1200330CAF /* Mocks */,
 				368ACEDF2B885720003A8435 /* SeekJobsTaskTests.swift */,
@@ -279,6 +288,7 @@
 		36CB18AE2B8B487F00330CAF /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				36CB18BE2B8B6D6A00330CAF /* View */,
 				36CB18B72B8B652500330CAF /* CoordinatorTests */,
 				36CB18B62B8B651100330CAF /* ViewModelTests */,
 			);
@@ -307,6 +317,30 @@
 				36CB18B82B8B657000330CAF /* HomeCoordinatorTests.swift */,
 			);
 			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		36CB18BA2B8B67FB00330CAF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18BB2B8B680400330CAF /* Coordinator */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		36CB18BB2B8B680400330CAF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18BC2B8B683600330CAF /* AppCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		36CB18BE2B8B6D6A00330CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18BF2B8B6D9F00330CAF /* JobsTableViewCellTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		36DD28A62B89EBD800686F6E /* Factory */ = {
@@ -355,6 +389,7 @@
 			children = (
 				36FF5D402B892800005EEE0E /* JobsTableViewCell.swift */,
 				368ACECC2B88571C003A8435 /* JobsViewController.swift */,
+				36CB18C12B8B792B00330CAF /* ProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				368ACF172B887E29003A8435 /* JobsViewModel.swift */,
+				36CB18C32B8B7B7600330CAF /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -582,6 +618,7 @@
 				368ACEC92B88571C003A8435 /* AppDelegate.swift in Sources */,
 				368ACF022B8863E5003A8435 /* NetworkService.swift in Sources */,
 				368ACF072B887108003A8435 /* LoginViewController.swift in Sources */,
+				36CB18C22B8B792B00330CAF /* ProfileViewController.swift in Sources */,
 				36DD28BE2B8A77A100686F6E /* JobsFactory.swift in Sources */,
 				368ACF102B887BA7003A8435 /* AppCoordinator.swift in Sources */,
 				36DD28B92B8A5A8500686F6E /* LoginRequest.swift in Sources */,
@@ -589,6 +626,7 @@
 				368ACF0C2B8877A9003A8435 /* HexColors.swift in Sources */,
 				368ACF122B887BEB003A8435 /* LoginCoordinator.swift in Sources */,
 				36FF5D382B88ED5A005EEE0E /* LoginConstants.swift in Sources */,
+				36CB18C42B8B7B7600330CAF /* ProfileViewModel.swift in Sources */,
 				368ACECB2B88571C003A8435 /* SceneDelegate.swift in Sources */,
 				36FF5D342B88B2A9005EEE0E /* LoginRepository.swift in Sources */,
 				36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */,
@@ -610,6 +648,8 @@
 				36CB18A62B8B0DF000330CAF /* LoginViewModelTest.swift in Sources */,
 				36CB18B92B8B657000330CAF /* HomeCoordinatorTests.swift in Sources */,
 				36CB18A92B8B0F8D00330CAF /* MockLoginCoordinator.swift in Sources */,
+				36CB18BD2B8B683600330CAF /* AppCoordinatorTests.swift in Sources */,
+				36CB18C02B8B6D9F00330CAF /* JobsTableViewCellTests.swift in Sources */,
 				36CB18B22B8B496100330CAF /* MockHomeCoordinator.swift in Sources */,
 				36CB18B52B8B58A900330CAF /* LoginCoordinatorTest.swift in Sources */,
 				368ACEE02B885720003A8435 /* SeekJobsTaskTests.swift in Sources */,

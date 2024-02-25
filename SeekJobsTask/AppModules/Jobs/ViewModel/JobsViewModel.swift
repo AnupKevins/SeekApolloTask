@@ -10,6 +10,7 @@ import Combine
 
 protocol JobsViewModelProtocol {
     func fetchActiveJobs(page: Int, completion: @escaping (Result<ActiveJobs, AppError>) -> Void)
+    func fetchAdditionalDataIfNeeded(for indexPath: IndexPath)
 }
 
 class JobsViewModel: ObservableObject, JobsViewModelProtocol {
@@ -32,9 +33,6 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
     
     func fetchActiveJobs(page: Int, completion: @escaping (Result<ActiveJobs, AppError>) -> Void) {
         
-//        guard validateHasNext() else {
-//            return
-//        }
         isLoading = true
         
         let limit = JobsConstants.dataConstants.itemLimits
@@ -87,5 +85,9 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
             title: JobsConstants.textConstants.noResponseTitle,
             message: JobsConstants.textConstants.noResponseDescription
         )
+    }
+    
+    func navigateToProfile() {
+        coordinator?.navigateToProfile()
     }
 }

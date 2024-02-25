@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginRequest: Requestable {
+struct LoginRequest {
 
     var username: String
     var password: String
@@ -15,9 +15,5 @@ struct LoginRequest: Requestable {
     init(username: String, password: String) {
         self.username = username
         self.password = password
-    }
-
-    var baseUrl: URL {
-        return URL(string: AppConstants.baseUrls.appBaseUrl)!
     }
 }

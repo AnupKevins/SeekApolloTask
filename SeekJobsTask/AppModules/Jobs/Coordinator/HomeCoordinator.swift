@@ -14,6 +14,8 @@ protocol HomeCoordinatorProtocol {
     func start()
     
     func presentAlert(title: String, message: String)
+    
+    func navigateToProfile()
 }
 
 class HomeCoordinator: HomeCoordinatorProtocol {
@@ -52,6 +54,13 @@ class HomeCoordinator: HomeCoordinatorProtocol {
         
         alertController.addAction(okAction)
         navigationController.topViewController?.present(alertController, animated: true, completion: nil)
+    }
+    
+    func navigateToProfile() {
+        let profileViewController = JobsFactory.createProfileViewController()
+        profileViewController.profileViewModel = JobsFactory.createProfileViewModel()
+        
+        navigationController.pushViewController(profileViewController, animated: true)
     }
 }
 

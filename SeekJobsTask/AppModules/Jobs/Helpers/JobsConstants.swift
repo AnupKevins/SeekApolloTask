@@ -18,6 +18,9 @@ enum JobsConstants {
         static let noResponseTitle = "Try Again later"
         static let noResponseDescription = "Something went wrong"
         static let jobsApplied = "Applied"
+        static let userProfileText = "Profile"
+        static let updatePasswordText = "Update Password"
+        static let logoutText = "Logout"
     }
     
     enum dataConstants {

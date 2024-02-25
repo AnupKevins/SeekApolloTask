@@ -24,7 +24,7 @@ class JobsTableViewCell: UITableViewCell {
         return view
     }()
     
-    private lazy var titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -32,7 +32,7 @@ class JobsTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var subtitleLabel: UILabel = {
+    lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12)
@@ -40,7 +40,7 @@ class JobsTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var descriptionLabel: UILabel = {
+    lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
@@ -49,7 +49,7 @@ class JobsTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var appliedLabel: UILabel = {
+    lazy var appliedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12)
@@ -61,6 +61,8 @@ class JobsTableViewCell: UITableViewCell {
         label.textAlignment = .center
         return label
     }()
+    
+   static let jobsCellStrIdentifier = JobsConstants.TableCellIdentifiers.jobsTableCell
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

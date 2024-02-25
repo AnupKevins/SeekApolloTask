@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JobsRequest: Requestable {
+struct JobsRequest {
     
     var limit: Int
     var page: Int
@@ -15,9 +15,5 @@ struct JobsRequest: Requestable {
     init(limit: Int, page: Int) {
         self.limit = limit
         self.page = page
-    }
-    
-    var baseUrl: URL {
-        return URL(string: AppConstants.baseUrls.appBaseUrl)!
     }
 }

@@ -10,9 +10,7 @@ import Combine
 
 class JobsViewController: UIViewController {
     
-    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
-    
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = HexColor.getUIColor(
@@ -22,21 +20,30 @@ class JobsViewController: UIViewController {
         return tableView
     }()
     
-    var jobsViewModel: JobsViewModel?
+    private lazy var profileButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem(
+            title: JobsConstants.textConstants.userProfileText,
+            style: .plain,
+            target: self,
+            action: #selector(profileButtonTapped)
+        )
+        return barButton
+    }()
     
-    let jobsCellStrIdentifier = JobsConstants.TableCellIdentifiers.jobsTableCell
+    var jobsViewModel: JobsViewModel?
     
     private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavUI()
+        configureProfileNavBarButton()
         configureUI()
         setupSubscriptions()
         fetchJobs()
     }
     
-    func fetchJobs() {
+   private func fetchJobs() {
 
         jobsViewModel?.fetchActiveJobs(page: jobsViewModel?.currentPage ?? 1 , completion: { [weak self] result in
             
@@ -50,7 +57,7 @@ class JobsViewController: UIViewController {
         })
     }
     
-    func setupSubscriptions() {
+    private func setupSubscriptions() {
         
         jobsViewModel?.jobsSubject.sink { [weak self] in
             guard let self = self else {
@@ -66,7 +73,7 @@ class JobsViewController: UIViewController {
             AppConstants.UIColors.hexStringBackground
         )
         
-        tableView.register(JobsTableViewCell.self, forCellReuseIdentifier: jobsCellStrIdentifier)
+        tableView.register(JobsTableViewCell.self, forCellReuseIdentifier: JobsTableViewCell.jobsCellStrIdentifier)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -93,6 +100,14 @@ class JobsViewController: UIViewController {
         }
     }
     
+    private func configureProfileNavBarButton() {
+        navigationItem.leftBarButtonItem = profileButton
+    }
+    
+    @objc private func profileButtonTapped() {
+        jobsViewModel?.navigateToProfile()
+    }
+    
     private func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -108,7 +123,7 @@ extension JobsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: jobsCellStrIdentifier, for: indexPath) as! JobsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: JobsTableViewCell.jobsCellStrIdentifier, for: indexPath) as! JobsTableViewCell
         
         configureCell(indexPath, cell)
         
