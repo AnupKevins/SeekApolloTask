@@ -38,6 +38,8 @@
 		36CB18C02B8B6D9F00330CAF /* JobsTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18BF2B8B6D9F00330CAF /* JobsTableViewCellTests.swift */; };
 		36CB18C22B8B792B00330CAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18C12B8B792B00330CAF /* ProfileViewController.swift */; };
 		36CB18C42B8B7B7600330CAF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18C32B8B7B7600330CAF /* ProfileViewModel.swift */; };
+		36CB18C62B8B898300330CAF /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18C52B8B898300330CAF /* ProfileViewModelTests.swift */; };
+		36CB18C92B8B9E4800330CAF /* LoginViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB18C82B8B9E4800330CAF /* LoginViewControllerUITest.swift */; };
 		36DD28B12B89F12000686F6E /* JobsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B02B89F12000686F6E /* JobsConstants.swift */; };
 		36DD28B42B89F9F300686F6E /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B32B89F9F300686F6E /* JobsRepository.swift */; };
 		36DD28B72B89FA2300686F6E /* ActiveJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD28B62B89FA2300686F6E /* ActiveJobs.swift */; };
@@ -102,6 +104,8 @@
 		36CB18BF2B8B6D9F00330CAF /* JobsTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCellTests.swift; sourceTree = "<group>"; };
 		36CB18C12B8B792B00330CAF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		36CB18C32B8B7B7600330CAF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		36CB18C52B8B898300330CAF /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
+		36CB18C82B8B9E4800330CAF /* LoginViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerUITest.swift; sourceTree = "<group>"; };
 		36DD28B02B89F12000686F6E /* JobsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsConstants.swift; sourceTree = "<group>"; };
 		36DD28B32B89F9F300686F6E /* JobsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		36DD28B62B89FA2300686F6E /* ActiveJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveJobs.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 		368ACEE82B885720003A8435 /* SeekJobsTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
+				36CB18C72B8B9E1C00330CAF /* Login */,
 				368ACEE92B885720003A8435 /* SeekJobsTaskUITests.swift */,
 				368ACEEB2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift */,
 			);
@@ -307,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				36CB18AF2B8B48A700330CAF /* JobsViewModelTest.swift */,
+				36CB18C52B8B898300330CAF /* ProfileViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -341,6 +347,14 @@
 				36CB18BF2B8B6D9F00330CAF /* JobsTableViewCellTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		36CB18C72B8B9E1C00330CAF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				36CB18C82B8B9E4800330CAF /* LoginViewControllerUITest.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		36DD28A62B89EBD800686F6E /* Factory */ = {
@@ -644,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CB18C62B8B898300330CAF /* ProfileViewModelTests.swift in Sources */,
 				36CB18B02B8B48A700330CAF /* JobsViewModelTest.swift in Sources */,
 				36CB18A62B8B0DF000330CAF /* LoginViewModelTest.swift in Sources */,
 				36CB18B92B8B657000330CAF /* HomeCoordinatorTests.swift in Sources */,
@@ -661,6 +676,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				368ACEEA2B885720003A8435 /* SeekJobsTaskUITests.swift in Sources */,
+				36CB18C92B8B9E4800330CAF /* LoginViewControllerUITest.swift in Sources */,
 				368ACEEC2B885720003A8435 /* SeekJobsTaskUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

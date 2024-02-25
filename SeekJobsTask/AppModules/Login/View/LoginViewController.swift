@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 class LoginViewController: UIViewController {
     
@@ -15,6 +14,7 @@ class LoginViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = LoginConstants.Login.userNamePlaceholder
         textField.borderStyle = .roundedRect
+        textField.accessibilityIdentifier = "Username"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         textField.placeholder = LoginConstants.Login.passwordPlaceholder
         textField.isSecureTextEntry = true
         textField.borderStyle = .roundedRect
+        textField.accessibilityIdentifier = "PasswordTextField"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -47,9 +48,7 @@ class LoginViewController: UIViewController {
     }()
 
     var loginViewModel: LoginViewModel?
-    
-  //  private var cancellables: Set<AnyCancellable> = []
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
      //   bindViewModel()

@@ -20,5 +20,7 @@ class MockHomeCoordinator: HomeCoordinatorProtocol {
     func start() {}
     
     func presentAlert(title: String, message: String) {}
+    
+    func navigateToProfile() {}
 }
 

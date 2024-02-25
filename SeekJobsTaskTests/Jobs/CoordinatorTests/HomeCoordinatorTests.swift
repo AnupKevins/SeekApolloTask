@@ -14,7 +14,7 @@ final class HomeCoordinatorTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    func testStart() {
+    func testNavigateToJobsSuccessful() {
         // Given
         let navigationController = UINavigationController()
         let coordinator = HomeCoordinator(navigationController: navigationController)
@@ -38,5 +38,15 @@ final class HomeCoordinatorTests: XCTestCase {
         XCTAssertTrue(navigationController.presentationController != nil)
         
         XCTAssertTrue((navigationController.topViewController?.isModalInPresentation) != nil)
+    }
+    
+    func testNavigateToProfileSuccessful() {
+        // Given
+        let navigationController = UINavigationController()
+        let coordinator = HomeCoordinator(navigationController: navigationController)
+        
+        coordinator.navigateToProfile()
+        
+        XCTAssertTrue(navigationController.topViewController is ProfileViewController, "Top view controller should be ProfileViewController")
     }
 }
