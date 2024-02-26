@@ -7,11 +7,8 @@
 
 import Foundation
 
-// Empty protocol
-protocol PlaceholderProtocol {}
-
 // MARK: - Active
-struct ActiveJobs: PlaceholderProtocol {
+struct ActiveJobs {
     var hasNext: Bool?
     var jobs: [InternalJob]?
 }

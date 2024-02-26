@@ -47,7 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     fileprivate func setupForUITestCases() {
-        if CommandLine.arguments.contains("--uitesting") {
+        if CommandLine.arguments.contains("home_uitesting") {
             // Skip the login flow and navigate to the desired screen
             UserDefaultManager.shared.isLoggedIn = true
         } else if CommandLine.arguments.contains("login_uitesting") {

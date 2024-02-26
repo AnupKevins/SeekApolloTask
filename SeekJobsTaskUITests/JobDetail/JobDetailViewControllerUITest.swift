@@ -14,7 +14,7 @@ final class JobDetailViewControllerUITest: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments += ["--uitesting"]
+        app.launchArguments += ["home_uitesting"]
         app.launch()
     }
 

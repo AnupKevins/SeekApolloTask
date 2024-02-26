@@ -13,7 +13,7 @@ protocol JobDetailModelProtocol {
     var jobLocation: String? { get set}
 }
 
-struct JobDetailModel {
+struct JobDetailModel: JobDetailModelProtocol {
     var jobTitle: String?
     var jobDescription: String?
     var jobLocation: String?
