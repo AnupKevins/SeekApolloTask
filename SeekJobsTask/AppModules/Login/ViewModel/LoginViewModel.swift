@@ -11,9 +11,7 @@ class LoginViewModel: ObservableObject {
     
     var loginRepositoryProtocol: LoginRepositoryProtocol?
     var coordinator: LoginCoordinatorProtocol?
-    
-   // let authTokenWillChange = PassthroughSubject<Void, Never>()
-    
+        
     private (set) var postsAuthToken: String = ""
     
     init(
@@ -46,20 +44,6 @@ class LoginViewModel: ObservableObject {
             }
         })
     }
-    
-//    private func performActionOnSuccess(_ value: String) {
-//        postsAuthToken = value
-//        authTokenWillChange.send()
-//    }
-//    
-//    private func performActionOnFailure() {
-//        showAlert()
-//        authTokenWillChange.send()
-//    }
-    
-//    func navigateToHomeJobsScreen() {
-//        coordinator?.goToHomeCoordinator()
-//    }
     
     func validateUserCredentials(_ username: String, _ password: String) -> LoginValidation {
         if username.isEmpty || password.isEmpty {
