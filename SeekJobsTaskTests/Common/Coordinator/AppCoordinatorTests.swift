@@ -18,7 +18,11 @@ final class AppCoordinatorTests: XCTestCase {
     func testStartWhenUserAlreadyLoggedIn() {
         // Given
         let navigationController = UINavigationController()
-        let coordinator = AppCoordinator(navigationController: navigationController)
+        let window = UIWindow()
+        let coordinator = AppCoordinator(
+            window: window,
+            navigationController: navigationController
+        )
         
         UserDefaultManager.shared.isLoggedIn = true
         // When
@@ -32,8 +36,11 @@ final class AppCoordinatorTests: XCTestCase {
     func testStartWhenUserNotLoggedIn() {
         // Given
         let navigationController = UINavigationController()
-        let coordinator = AppCoordinator(navigationController: navigationController)
-        
+        let window = UIWindow()
+        let coordinator = AppCoordinator(
+            window: window,
+            navigationController: navigationController
+        )
         UserDefaultManager.shared.isLoggedIn = false
         // When
         coordinator.start()

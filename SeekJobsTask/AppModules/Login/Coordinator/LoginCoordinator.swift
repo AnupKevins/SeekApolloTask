@@ -11,7 +11,7 @@ import UIKit
 protocol LoginCoordinatorProtocol {
     var navigationController : UINavigationController { get set }
     
-    func start()
+    func start() -> UIViewController
     
     func presentAlert(title: String, message: String)
 }
@@ -25,7 +25,7 @@ class LoginCoordinator: LoginCoordinatorProtocol {
         self.navigationController = navigationController
     }
 
-    func start() {
+    func start() -> UIViewController {
         
         let loginViewController = LoginFactory.createLoginViewController()
         
@@ -33,7 +33,9 @@ class LoginCoordinator: LoginCoordinatorProtocol {
             loginCoordinator: self
         )
         
-        navigationController.pushViewController(loginViewController, animated: true)
+        return loginViewController
+//
+//        navigationController.pushViewController(loginViewController, animated: true)
     }
     
     func presentAlert(title: String, message: String) {

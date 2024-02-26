@@ -20,24 +20,22 @@ final class HomeCoordinatorTests: XCTestCase {
         let coordinator = HomeCoordinator(navigationController: navigationController)
         
         // When
-        coordinator.start()
+        let vc = coordinator.start()
         
         // Then
-        XCTAssertTrue(navigationController.viewControllers.count == 1, "Start should push one view controller")
-        XCTAssertTrue(navigationController.topViewController is JobsViewController, "Top view controller should be LoginViewController")
+       // XCTAssertTrue(navigationController.viewControllers.count == 1, "Start should push one view controller")
+        XCTAssertTrue(vc is JobsViewController, "view controller should be JobsViewController")
     }
     
     func testPresentAlert() {
         let navigationController = UINavigationController()
         let coordinator = HomeCoordinator(navigationController: navigationController)
         
-        coordinator.start()
+        //coordinator.start()
         // When
         coordinator.presentAlert(title: "Alert", message: "detail")
         
         XCTAssertTrue(navigationController.presentationController != nil)
-        
-        XCTAssertTrue((navigationController.topViewController?.isModalInPresentation) != nil)
     }
     
     func testNavigateToProfileSuccessful() {

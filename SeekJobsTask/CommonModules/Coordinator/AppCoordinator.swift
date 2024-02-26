@@ -9,41 +9,53 @@ import Foundation
 import UIKit
 
 protocol Coordinator {
-    var navigationController : UINavigationController { get set }
     
+    var navigationController: UINavigationController { get set }
+
     func start()
 }
 
 class AppCoordinator: Coordinator {
+    private let window: UIWindow
     
     var navigationController: UINavigationController
     
-    init(navigationController : UINavigationController) {
+    init(window: UIWindow, 
+         navigationController: UINavigationController = UINavigationController()
+    ) {
+        self.window = window
         self.navigationController = navigationController
     }
-    func start() {
+    
+    func start()  {
+        
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+        
         if UserDefaultManager.shared.isLoggedIn {
-            goToHomeCoordinator()
+            let homeCoordinatorVC = getJobVC()
+            navigationController.setViewControllers([homeCoordinatorVC], animated: true)
         } else {
-            goToLoginCoordinator()
+            let loginCoordinatorVC = getLoginVC()
+            navigationController.setViewControllers([loginCoordinatorVC], animated: true)
         }
     }
     
-    func goToLoginCoordinator(){
-              
+    private func getLoginVC() -> UIViewController {
+        
         let loginCoordinator = LoginFactory.createLoginCoordinator(
-            navigationController: navigationController
+            navigationController: self.navigationController
         )
         
-        loginCoordinator.start()
+        return loginCoordinator.start()
     }
     
-    func goToHomeCoordinator() {
+    private func getJobVC() -> UIViewController {
 
         let homeCoordinator = JobsFactory.createHomeCoordinator(
             navigationController: self.navigationController
         )
         
-        homeCoordinator.start()
+        return homeCoordinator.start()
     }
 }

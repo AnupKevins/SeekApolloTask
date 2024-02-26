@@ -11,7 +11,7 @@ import UIKit
 protocol HomeCoordinatorProtocol {
     var navigationController : UINavigationController { get set }
     
-    func start()
+    func start() -> UIViewController
     
     func presentAlert(title: String, message: String)
     
@@ -28,15 +28,15 @@ class HomeCoordinator: HomeCoordinatorProtocol {
         self.navigationController = navigationController
     }
 
-    func start() {
+    func start() -> UIViewController {
         
         let jobsViewController = JobsFactory.createJobsViewController()
         
         jobsViewController.jobsViewModel = JobsFactory.createJobsViewModel(
             homeCoordinator: self
         )
-        
-        navigationController.pushViewController(jobsViewController, animated: true)
+        return jobsViewController
+        //navigationController.pushViewController(jobsViewController, animated: true)
     }
     
     func presentAlert(title: String, message: String) {

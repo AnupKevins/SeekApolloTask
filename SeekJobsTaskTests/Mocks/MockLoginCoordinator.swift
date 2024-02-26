@@ -21,7 +21,9 @@ class MockLoginCoordinator: LoginCoordinatorProtocol {
         self.navigationController = navigationController
     }
     
-    func start() {}
+    func start() -> UIViewController {
+        return LoginViewController()
+    }
     
     func presentAlert(title: String, message: String) {
         presentedTitle = title

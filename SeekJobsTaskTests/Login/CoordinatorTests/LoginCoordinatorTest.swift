@@ -20,23 +20,18 @@ final class LoginCoordinatorTest: XCTestCase {
         let coordinator = LoginCoordinator(navigationController: navigationController)
         
         // When
-        coordinator.start()
+        let vc = coordinator.start()
         
-        // Then
-        XCTAssertTrue(navigationController.viewControllers.count == 1, "Start should push one view controller")
-        XCTAssertTrue(navigationController.topViewController is LoginViewController, "Top view controller should be LoginViewController")
+        XCTAssertTrue(vc is LoginViewController, "Top view controller should be LoginViewController")
     }
     
     func testPresentAlert() {
         let navigationController = UINavigationController()
         let coordinator = LoginCoordinator(navigationController: navigationController)
         
-        coordinator.start()
         // When
         coordinator.presentAlert(title: "Alert", message: "detail")
         
         XCTAssertTrue(navigationController.presentationController != nil)
-        
-        XCTAssertTrue((navigationController.topViewController?.isModalInPresentation) != nil)
     }
 }

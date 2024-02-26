@@ -45,7 +45,7 @@ class JobsViewModel: ObservableObject, JobsViewModelProtocol {
                 self?.performActionOnSuccess(activeJobs)
                 completion(.success(activeJobs))
             case .failure(let error):
-               //  self?.performActionOnFailure()
+                self?.performActionOnFailure()
                 completion(.failure(error))
             }
         })

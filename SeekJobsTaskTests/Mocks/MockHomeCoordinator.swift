@@ -17,7 +17,9 @@ class MockHomeCoordinator: HomeCoordinatorProtocol {
         self.navigationController = UINavigationController()
     }
     
-    func start() {}
+    func start() -> UIViewController {
+        return JobsViewController()
+    }
     
     func presentAlert(title: String, message: String) {}
     

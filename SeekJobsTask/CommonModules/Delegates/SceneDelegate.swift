@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var appCoordinator : AppCoordinator?
+    var appCoordinator : Coordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -25,26 +25,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupRootViewController(_ windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
         
-        let navigationController = getNavUpdateAppCoordinator()
-
-        window.rootViewController = navigationController
+//        let navigationController = getNavUpdateAppCoordinator()
+//
+//        window.rootViewController = navigationController
+//        window.frame = UIScreen.main.bounds
+//        window.makeKeyAndVisible()
         window.frame = UIScreen.main.bounds
-        window.makeKeyAndVisible()
         self.window = window
+        switchToRootScreen()
     }
     
     func switchToRootScreen() {
-        let navigationController = getNavUpdateAppCoordinator()
+       // let navigationController = getNavUpdateAppCoordinator()
         
-        self.window?.rootViewController = navigationController
+      //  self.window?.rootViewController = navigationController
+        
+       
+        appCoordinator = AppCoordinator(window: self.window!)
+        appCoordinator?.start()
     }
     
-    private func getNavUpdateAppCoordinator() -> UINavigationController {
-        let navigationController = UINavigationController()
+   /* private func getNavUpdateAppCoordinator() -> UINavigationController {
+//        let navigationController = UINavigationController()
+//        appCoordinator = AppCoordinator(navigationController: navigationController)
+//        appCoordinator?.start()
+        var navigationController = UINavigationController()
         appCoordinator = AppCoordinator(navigationController: navigationController)
-        appCoordinator?.start()
+        let controller = appCoordinator?.start()
+        navigationController = UINavigationController(rootViewController: controller!)
         return navigationController
-    }
+       // return navigationController
+    }*/
     
     fileprivate func setupForUITestCases() {
         if CommandLine.arguments.contains("home_uitesting") {
