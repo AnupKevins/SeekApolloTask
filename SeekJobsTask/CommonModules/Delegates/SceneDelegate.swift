@@ -24,38 +24,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupRootViewController(_ windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        
-//        let navigationController = getNavUpdateAppCoordinator()
-//
-//        window.rootViewController = navigationController
-//        window.frame = UIScreen.main.bounds
-//        window.makeKeyAndVisible()
+    
         window.frame = UIScreen.main.bounds
         self.window = window
         switchToRootScreen()
     }
     
     func switchToRootScreen() {
-       // let navigationController = getNavUpdateAppCoordinator()
-        
-      //  self.window?.rootViewController = navigationController
-        
-       
-        appCoordinator = AppCoordinator(window: self.window!)
-        appCoordinator?.start()
+        if let window = self.window {
+            appCoordinator = AppCoordinator(window: window)
+            appCoordinator?.start()
+        }
     }
-    
-   /* private func getNavUpdateAppCoordinator() -> UINavigationController {
-//        let navigationController = UINavigationController()
-//        appCoordinator = AppCoordinator(navigationController: navigationController)
-//        appCoordinator?.start()
-        var navigationController = UINavigationController()
-        appCoordinator = AppCoordinator(navigationController: navigationController)
-        let controller = appCoordinator?.start()
-        navigationController = UINavigationController(rootViewController: controller!)
-        return navigationController
-       // return navigationController
-    }*/
     
     fileprivate func setupForUITestCases() {
         if CommandLine.arguments.contains("home_uitesting") {
